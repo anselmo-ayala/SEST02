@@ -1,0 +1,32 @@
+- Create a repository
+git init
+
+- Configure Git
+git config --global user.name "username"
+git config user.name
+
+git config --global user.email "email"
+git config user.email
+
+Git 3 Stage Architecture
+
+1. Working Area
+2. Staging Area
+3. Commit Stage
+
+- Check the status of all our files and folders
+git status
+
+- Add the modified files to the staging Area
+git add .
+
+- Create a commit
+git commit -m "Description."
+
+- Check the history
+git log
+
+Legends
+U - Untracked
+A - Added
+M - Modified
