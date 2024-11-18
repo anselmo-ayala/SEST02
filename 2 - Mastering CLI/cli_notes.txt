@@ -1,0 +1,69 @@
+Graphical User Interface (GUI) - Button, Icons
+Command-line Interface (CLI) - Text based commands.
+
+- Create a folder
+mkdir [folder-name]
+
+- Delete a folder
+rmdir [folder-name]
+
+- List all the files and folders inside of the current folder
+ls
+
+- List all the files and folders inside of the current folder including the hidden files and folders.
+ls -a
+
+- List all the files and folders inside of the current folder including information
+ls -l
+
+- Print Working Directory
+pwd - Check the files, folders, subfolders of the current folder
+find .
+
+- Show all folders inside of the current folder
+find . -type d
+
+- Show all files inside of the current folder
+find . -type f
+
+- Search for files using file name.
+find . -name [filename.extension]
+
+- Search for files using file extension.
+find . -name [*.extension]
+
+- Change Directory
+cd
+
+- Go back one directory
+cd ..
+
+- Create a file
+touch [filename]
+
+- Create a hidden file
+touch [.filename]
+
+- Remove/delete a file
+rm [.filename]
+
+- Copy a file
+cp [filename] [destination_path]
+
+- Rename a file
+mv [current_filename] [new_filename]
+
+- Move a file
+mv [curret_filename] [destination_path]
+
+- Show the content of the file
+cat [filename.extension]
+
+- Display the first 10 lines of the file.
+head [filename.extension]
+
+- Display the last 10 lines of the file.
+tail [filename.extension]
+
+- Display the nth number of line
+[head/tail] -n [number_of_lines] [filename.extension]

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating Forms</title>
+</head>
+
+<body>
+  <h1>Creating Forms</h1>
+  <form action="" enctype="multipart/form-data">
+    <div>
+      <label for="fullname-id">Name:</label>
+      <input type="text" name="user-fullname" id="fullname-id" placeholder="John Doe" required pattern="[\w\s\.]{5,40}"
+        title="" />
+    </div>
+    <!-- REGular EXpressions -->
+    <!-- \w - any words -->
+    <!-- \s - spaces -->
+    <!-- \d - any digits -->
+    <!-- \. -->
+    <div>
+      <label for="email-id">Email:</label>
+      <input type="email" name="user-email" id="email-id" placeholder="johndoe@example.com" required />
+    </div>
+    <div>
+      <label for="password-id">Password:</label>
+      <input type="password" name="user-password" id="password-id" placeholder="************" minlength="10"
+        maxlength="20" required />
+    </div>
+    <div>
+      <label for="age-id">Age:</label>
+      <input type="number" name="user-age" id="age-id" placeholder="18" min="18" max="100" required />
+    </div>
+    <div>
+      <label for="number-id">Mobile No:</label>
+      <input type="tel" name="user-number" id="number-id" pattern="09[0-9]{2}-[0-9]{3}-[0-9]{4}"
+        placeholder="09xx-xxx-xxxx" required />
+    </div>
+    <div>
+      <label for="birthdate-id">Birthdate:</label>
+      <input type="date" name="user-birthdate" id="birthdate-id" required />
+    </div>
+
+    <div>
+      <label for="time-id">Time:</label>
+      <input type="time" name="user-time" id="time-id" />
+    </div>
+
+    <div>
+      <label for="datetime-local-id">Date and Time:</label>
+      <input type="datetime-local" name="meeting-datetime-local" id="datetime-local-id" />
+    </div>
+
+    <div>
+      <label for="message-id">Message:</label><br />
+      <textarea name="user-message" id="message-id" placeholder="What's on your mind?" cols="30" rows="10"></textarea>
+    </div>
+    <div>
+      <label for="gender-id">Gender:</label>
+      <select name="user-gender" id="gender-id" require>
+        <option value="" selected disabled hidden>
+          -- Select your Gender --
+        </option>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+        <option value="O">Others</option>
+      </select>
+    </div>
+
+    <div>
+      <!-- Choose one from limited number of choices. -->
+      <input type="radio" name="profile-status" id="public-id" value="public" />
+      <label for="public-id">Public</label>
+      <input type="radio" name="profile-status" id="private-id" value="private" />
+      <label for="private-id">Private</label>
+    </div>
+
+    <div>
+      <!-- None or multiple values from the choices available. -->
+      <input type="checkbox" name="genre" id="action-id" value="action" />
+      <label for="action-id">Action</label>
+      <input type="checkbox" name="genre" id="horror-id" value="horror" />
+      <label for="horror-id">Horror</label>
+      <input type="checkbox" name="genre" id="thriller-id" value="thriller" />
+      <label for="thriller-id">Thriller</label>
+      <input type="checkbox" name="genre" id="scifi-id" value="scifi" />
+      <label for="scifi-id">Sci-fi</label>
+    </div>
+
+    <!-- Hidden -->
+    <input type="hidden" name="user-hidden-data" value="sensitive-information" />
+
+    <div>
+      <label for="color-id">Favorite Color</label>
+      <input type="color" name="user-favorite-color" id="color-id" />
+    </div>
+
+    <div>
+      <label for="range-id">Rating (1-10): </label>
+      <input type="range" name="user-range" id="range-id" min="1" max="10" />
+    </div>
+
+    <div>
+      <!-- Accept all file formats. Pictures, Videos, Files -->
+      <label for="file-id">Upload a file:</label>
+      <input type="file" name="user-file" id="file-id" multiple />
+    </div>
+
+    <div>
+      <!-- Accept Pictures -->
+      <label for="picture-id">Upload Images:</label>
+      <input type="file" name="user-file" id="picture-id" multiple
+        accept="image/png, image/jpg, image/jpeg, image/gif, image/webp" />
+    </div>
+
+    <div>
+      <!-- Accept Audios -->
+      <label for="audio-id">Upload Audios:</label>
+      <input type="file" name="user-audios" id="audio-id" multiple accept="audio/mp3 ,audio/wav,audio/ogg,audio/mpeg" />
+    </div>
+
+    <div>
+      <!-- Accept Videos -->
+      <label for="video-id">Upload Videos:</label>
+      <input type="file" name="user-videos" id="video-id" multiple
+        accept="video/mp4 ,video/mpeg,video/ogg,video/webm" />
+    </div>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+  </form>
+</body>
+</html>

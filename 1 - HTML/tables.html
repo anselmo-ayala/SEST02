@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tables</title>
+    </head>
+    <body>
+        <h1>Tables</h1>
+        <a href="typography.html">Typography</a>
+
+        <!-- tr - table row -->
+        <!-- th - Table Header -->
+        <!-- td - Table Data -->
+        <h2>Product Details</h2>
+        <table border="2">
+            <thead bgcolor="tomato">
+                <tr>
+                    <th width="100">Name</th>
+                    <th width="100">Color</th>
+                    <th width="80">Size</th>
+                </tr>
+            </thead>
+
+            <tbody align="center">
+                <tr>
+                    <td>T-shirt</td>
+                    <td>Navy Blue</td>
+                    <td>XL</td>
+                </tr>
+                <tr>
+                    <td>T-shirt</td>
+                    <td>Navy Blue</td>
+                    <td>XXL</td>
+                </tr>
+                <tr>
+                    <td>Polo</td>
+                    <td>Coffee White</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>Polo</td>
+                    <td>Coffee White</td>
+                    <td>XL</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br />
+        <table border="2">
+            <thead bgcolor="tomato">
+              <tr>
+                <th width="100">Name</th>
+                <th width="100">Color</th>
+                <th width="80">Size</th>
+              </tr>
+            </thead>
+            <tbody align="center">
+              <tr>
+                <td rowspan="2">T-Shirt</td>
+                <td rowspan="2">Navy Blue</td>
+                <td>XL</td>
+              </tr>
+              <tr>
+                <td>XXL</td>
+              </tr>
+              <tr>
+                <td rowspan="2">Polo</td>
+                <td rowspan="2">Coffee White</td>
+                <td>M</td>
+              </tr>
+              <tr>
+                <td>XL</td>
+              </tr>
+              <tr>
+                <td colspan="3">Total Products: 2</td>
+              </tr>
+            </tbody>
+          </table>
+
+    </body>
+</html>
