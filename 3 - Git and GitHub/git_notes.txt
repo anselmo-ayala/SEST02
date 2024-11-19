@@ -34,6 +34,17 @@ git revert --no-edit [commit-hash]
 - RESETTING
 git reset [commit-hash]
 
+- Branching
+
+- List all of the branch
+git branch -a
+
+- Create a new branch
+git branch [branch-name]
+
+- Switch to a different branch
+git checkout [branch-name]
+
 Legends
 U - Untracked
 A - Added
