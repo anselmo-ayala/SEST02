@@ -30,3 +30,6 @@ Legends
 U - Untracked
 A - Added
 M - Modified
+
+
+This is an example problematic functionality
