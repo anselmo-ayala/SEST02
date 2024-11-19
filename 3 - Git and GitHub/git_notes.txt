@@ -49,3 +49,17 @@ Legends
 U - Untracked
 A - Added
 M - Modified
+
+=== Create a Remote repository ===
+
+- Add a remote to the local repository
+git remote add origin [remote-repository-url]
+
+- Rename the master to the main
+git branch -M main
+
+- Push commits to remote repository for the first time.
+git push -u origin main
+
+- Push commits to the remote repository
+git push
