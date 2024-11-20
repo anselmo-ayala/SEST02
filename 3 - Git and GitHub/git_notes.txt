@@ -63,3 +63,6 @@ git push -u origin main
 
 - Push commits to the remote repository
 git push
+
+=== Cloning ===
+git clone [repository-url]
