@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradients</title>
+    <style>
+div {
+    height: 100px;
+}
+
+        #top-to-bottom {
+            
+            background-image: linear-gradient(#ff1b6b, #45caff);
+        }
+
+        #left-to-right {
+        background-image: linear-gradient(to right, #696eff, #f8acff);
+        /* background-image: linear-gradient(to left, #696eff, #f8acff); */
+      }
+
+      #top-left-to-bottom-right {
+        background-image: linear-gradient(to bottom right, #083d77, #ebebd3);
+      }
+
+      #multiple-color-stops {
+        background-image: linear-gradient(
+          to right,
+          #f7b267,
+          #f79d65,
+          #f4845f,
+          #f27059
+        );
+        /* background-image: linear-gradient(
+          to right,
+          red,
+          orange,
+          yellow,
+          green,
+          blue,
+          indigo,
+          violet
+        ); */
+      }
+
+      #transparency {
+        background-image: linear-gradient(
+          to right,
+          rgba(3, 5, 94, 1),
+          rgba(3, 5, 94, 0.1)
+        );
+      }
+
+      #repeating-linear-gradient {
+        /* background-image: repeating-linear-gradient(
+          to right,
+          #ff1b6b 25%,
+          #45caff 50%
+        ); */
+        background-image: repeating-linear-gradient(
+          to right,
+          #ff1b6b 0% 25%,
+          #45caff 25% 50%
+        );
+      }
+       /* Radial Gradients */
+      #radial-gradient {
+        background-image: radial-gradient(#ff930f, #fff95b);
+        /* background-image: radial-gradient(#ffdd55, #fcc602, #663399, #4c257e); */
+      }
+
+      #set-shape {
+        background-image: radial-gradient(circle, #ffdd55, #4c257e);
+      }
+
+      #repeating-radial-gradient {
+        background-image: repeating-radial-gradient(#ffdd55 30%, #4c257e 60%);
+      }
+    </style>
+</head>
+<body>
+    <h1>CSS Gradients</h1>
+
+    <h2>CSS Linear Gradients</h2>
+    <div id="top-to-bottom">Top to Bottom(Default)</div>
+    <div id="left-to-right">Left to Right</div>
+    <div id="top-left-to-bottom-right">Top Left to Bottom Right</div>
+    <div id="multiple-color-stops">Multiple Color Stops</div>
+    <div id="transparency">Transparency</div>
+    <div id="repeating-linear-gradient">Repeating Linear Gradient</div>
+
+    <h2>Radial Gradients</h2>
+    <div id="radial-gradient">Radial Gradient</div>
+    <div id="set-shape">Set Shape</div>
+    <div id="repeating-radial-gradient">Repeating Radial Gradient</div>
+</body>
+</html>

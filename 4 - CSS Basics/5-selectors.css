@@ -1,0 +1,133 @@
+/* Element Selector */
+span {
+  /* background-color: #fc9bac; */
+  font-size: 18px;
+}
+
+/* Universal Selector */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ID Selector */
+#title {
+  text-align: center;
+}
+
+/* Class Selector */
+.paragraph {
+  background-color: #ee6c4d;
+}
+/* .second {
+  color: #ffd5c2;
+} */
+p.paragraph.second {
+  color: #ffd5c2;
+}
+
+/* Grouping Selector */
+ul,
+ol {
+  /* background-color: aqua; */
+  list-style: none;
+}
+
+/* Descendant Selector */
+ul li {
+  background-color: aqua;
+}
+
+ul span {
+  font-style: italic;
+}
+
+/* Direct Child/Descendant */
+li > span {
+  color: red;
+}
+/* This will work */
+/* .second > .child {
+  color: red;
+} */
+
+/* Sibling Selectors */
+/* Next Siblings Selector (~) */
+li.second ~ li {
+  text-align: center;
+}
+
+/* Direct Sibling Selector (+) */
+li.second + li {
+  text-decoration: underline solid tomato;
+}
+
+/* Pseudo-classes */
+p:first-child {
+  text-decoration: overline solid pink 4px;
+}
+
+p:last-child {
+  text-decoration: underline solid pink 4px;
+}
+
+p:nth-child(2) {
+  text-decoration: line-through solid purple 4px;
+}
+
+p:nth-child(2n) {
+  text-decoration: line-through solid purple 4px;
+  background-color: aqua;
+}
+
+/* Slected with no class tag */
+p:not(.third) {
+  font-style: italic;
+  color: green;
+}
+
+input:focus {
+  color: red;
+}
+
+input:required {
+  background-color: #f51e1e40;
+}
+
+button {
+  background-color: #b7efc5;
+}
+button:hover {
+  background-color: #4ad66d;
+}
+button:active {
+  background-color: #1a7431;
+}
+
+#sign-up:link {
+  color: #2dc653;
+  text-decoration: underline dashed #10451d 2px;
+}
+
+#sign-up:visited {
+  color: #3e92cc;
+  text-decoration: dashed underline #13293d 2px;
+}
+
+/* Attribute Selector */
+#sign-up[target="_blank"] {
+  text-decoration: none;
+}
+
+/* Pseudo-element */
+p.quote::first-letter {
+  font-size: 24px;
+  color: tomato;
+}
+p.quote::before {
+  content: "(Before Content)";
+  color: blue;
+}
+p.quote::after {
+  content: "(After Content)";
+  color: orange;
+}

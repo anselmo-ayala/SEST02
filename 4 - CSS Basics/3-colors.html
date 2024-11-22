@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Colors</title>
+
+    <style>
+        /* https://developer.mozilla.org/en-US/docs/Web/CSS/named-color */
+      #color-names {
+        color: fuchsia;
+        background-color: aqua;
+      }
+
+      #rgb {
+        /* R-Red, G-Green, B-Blue */
+        /* Value: 0 - 255 */
+        color: rgb(255, 0, 0);
+        /* Alpha: Transparent / Opaque */
+        /* Value: 0.0 - 1.0 */
+        background-color: rgba(255, 0, 0, 0.5);
+      }
+
+      #hexadecimal {
+        /* #RRGGBB */
+        /* Values: 0-9, A-F */
+        color: #f4f1de;
+        /* #RRGGBBAA */
+        background-color: #e07a5f99;
+      }
+
+      #hsl {
+        /* H - Hue (Values: 0 - 360) [Red(0 or 360), Green(120), Blue(240)] */
+        /* S - Saturation:  (Values: 0% - 100%) [Shade of Gray - 0, Full Color - 100] */
+        /* L - Lightness: (Values: 0% - 100%) [Black (0%) - White (100%)] */
+        color: hsl(120, 100%, 25%);
+        background-color: hsl(360, 100%, 80%);
+      }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Colors</h1>
+    <div id="color-names">This is a colorful sentence.</div>
+    <div id="rgb">This is a colorful sentence.</div>
+    <div id="hexadecimal">This is a colorful sentence.</div>
+    <div id="hsl">This is a colorful sentence.</div>
+</body>
+
+</html>
