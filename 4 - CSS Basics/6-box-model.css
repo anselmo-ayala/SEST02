@@ -1,0 +1,69 @@
+.box {
+  background-color: #ed6a5a;
+  height: 100px;
+  width: 100px;
+  color: #f4f1bb;
+  font-weight: bolder;
+  font-size: 20px;
+  box-shadow: 10px 10px 8px 2px #9bc1bc;
+  /* h-offset: negative(left) - positive(right)*/
+  /* v-offset: negative(top) - positive(bottom) */
+  /* blur: higher value will make it more blurred */
+  /* spread:  */
+  /* color of the shadow */
+  /* inset: put the shadow inside of the box */
+  /* 1 value: all sides */
+  /* 2 values: (top and bottom)(right and left) */
+  /* 3 values: top , (left and right), bottom */
+  /* 4 values: top, right, bottom, left (clockwise) */
+  border-style: solid dashed dotted double;
+  border-color: #f4f1bb #93e1d8 #9381ff #00a6ed;
+  border-width: 8px 10px 12px 14px;
+  border: dashed #00a6ed 8px;
+}
+
+/* Padding (inner spacing) - add a space inside the box. */
+.box1 {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+}
+
+/* Padding Shorthand */
+.box2 {
+  /* 1 value: all sides */
+  /* 2 values: (top and bottom)(right and left) */
+  /* 3 values: top , (left and right), bottom */
+  /* 4 values: top, right, bottom, left (clockwise) */
+  padding: 10px 20px 30px 40px;
+}
+
+/* Margin (space outside) */
+.box3 {
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+
+/* Margin Shorthand */
+.box4 {
+  /* 1 value: all sides */
+  /* 2 values: (top and bottom)(right and left) */
+  /* 3 values: top , (left and right), bottom */
+  /* 4 values: top, right, bottom, left (clockwise) */
+  margin: 10px 20px 30px 40px;
+}
+
+.cirle {
+  /* total width: 10 + 100 + 10 = 120px */
+  /* radius: 120 / 2 = 60px */
+  background-color: #102542;
+  color: #fcfaf9;
+  height: 100px;
+  width: 100px;
+  border: solid 10px #f27a7d;
+  border-radius: 60px;
+  text-align: center;
+}
