@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Units of Measurement</title>
+
+    <style>
+        #absolute-unit-px {
+            font-size: 16px; /* Default font is 16px */
+            font-size: 20px;
+        }
+        
+        #relative-unit-em {
+            /* Relative to its parent. */
+            font-size: 2em;
+        }
+
+        #relative-unit-rem {
+            font-size: 2rem;
+        }
+
+        /* Parent Box */
+        #parent-box {
+            width: 200px;
+            border: solid 4px tomato;
+        }
+
+        .child-box {
+            font-size: 20px;
+            border: solid 4px #0077b6;
+        }
+
+        .relative-unit-percent {
+            /* Relative to its parent. */
+            background-color: #e9c46a;
+            width: 50%;
+        }
+
+        .relative-unit-view-width {
+        /* Relative to the viewport width */
+        background-color: #ef233c;
+        color: white;
+        width: 50vw;
+        /* 1vw = 1% viewport width */
+      }
+
+      .relative-unit-view-height {
+        /* Relative to the viewport height */
+        background-color: #588157;
+        color: white;
+        height: 100vh;
+        /* 1vh = 1% viewport height */
+      }
+    </style>
+
+</head>
+
+<body>
+    <h1>CSS Units of Measurement</h1>
+    <p id="absolute-unit-px">Absolute Unit (px)</p>
+
+    <div style="font-size: 20px">
+        <p id="relative-unit-em">Relative Unit (em)</p>
+        <p id="relative-unit-rem">Relative Unit (rem)</p>
+    </div>
+
+    <div id="parent-box">
+        <div class="child-box relative-unit-percent">Relative Unit (%)</div>
+        <div class="child-box relative-unit-view-width">Relative Unit (vw)</div>
+        <div class="child-box relative-unit-view-height">Relative Unit (vh)</div>
+    </div>
+
+</body>
+
+</html>

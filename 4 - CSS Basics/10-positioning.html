@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Positioning</title>
+    <style>
+        #parent {
+            position: relative;
+            border: 2px solid #3a405a;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #example-content {
+            border: 2px solid #3a405a;
+            background-color: #f54952;
+            height: 2000px;
+            color: white;
+            font-size: 3rem;
+        }
+
+        /* == Relative Positioning == */
+        #relative {
+            /* Relative to its original position. */
+            background-color: #ef476f;
+            color: white;
+            /* position: static; Default */
+            position: relative;
+            /* top, right, bottom, left */
+            top: 50px;
+            left: 30px;
+        }
+
+        /* == Absolute Positioning == */
+        /* Element will be removed from the normal document flow. */
+        /* If element's parent positions is set to static, relative to the viewport. */
+        /* However, if the element's parent position is not set to static, relative to the parent. */
+        #absolute {
+            background-color: #f78c6b;
+            color: white;
+            position: absolute;
+            /* top, right, bottom, left */
+            top: 0px;
+            right: 0px;
+        }
+
+        /* == Absolute Positioning == */
+        #absolute {
+            background-color: #f78c6b;
+            color: white;
+            position: absolute;
+        }
+
+        /* == Fixed Positioning == */
+        /* Element will be removed from the normal document flow. */
+        /* Relative to the viewport */
+        /* Even if you scroll, it will stay there */
+        #fixed {
+            background-color: #06d6a0;
+            color: white;
+            position: fixed;
+            /* top, right, bottom, left */
+            bottom: 0px;
+            right: 0px;
+        }
+
+        /* == Sticky Positioning ==  */
+        /* Remove from the normal document flow. */
+        /* Relative to the viewport */
+        #sticky {
+            background-color: #118ab2;
+            color: white;
+            position: sticky;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Positioning</h1>
+    <div id="parent">
+        <div>This is the first div</div>
+        <div>This is the second div</div>
+        <div id="relative">Relative Positioning</div>
+        <div id="absolute">Absolute Positioning</div>
+        <div id="fixed">Fixed Positioning</div>
+    </div>
+    <div id="sticky">Sticky Positioning</div>
+    <div id="example-content">Example Content</div>
+</body>
+
+</html>

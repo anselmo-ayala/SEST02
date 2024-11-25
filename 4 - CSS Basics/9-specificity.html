@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Specificity</title>
+    <style>
+
+            /* !important: remove the specificity */
+        p {
+            background-color: #223843 !important;
+            color: #eff1f3 !important;
+        }
+            /* 0, 1, 0, 1 */
+        p#paragraph-id {
+            background-color: #0a2463;
+            color: #fb3640;
+        }
+        /* 1, 0, 0, 0 */
+        /* inline-styling, id, class, element */
+        /* style="background-color: #d90368; color: #f75c03" */
+
+            /* N: id selector is more specific compared to class and element selectors */
+        #paragraph-id {
+            background-color: #00272b;
+            color: #e0ff4f;
+        }
+            /* N: class selectors are more specific compared to element selectors */
+        .paragraph-class {
+            background-color: #e07a5f;
+            color: #f4f1de;
+        }
+        p {
+            background-color: #0d3b66;
+            color: #faf0ca;
+        }
+    
+        p {
+            background-color: #bad4aa;
+            color: #ebf5df;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Specificity</h1>
+    <p id="paragraph-id" class="paragraph-class">
+        This paragraph will be styled using different selectors.
+    </p>
+</body>
+
+</html>
