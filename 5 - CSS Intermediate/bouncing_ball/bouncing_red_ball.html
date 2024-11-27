@@ -27,7 +27,29 @@
             /* top, bottom, left, right */
             left: 50%;
             transform: translateX(-50%);
-            animation: bounce 2s ease 600ms infinite normal none;
+
+            /* == ANIMATION == */
+            /* animation-name: fall;
+            animation-duration: 1000ms;
+            animation-delay: 600ms;
+            /* values: 1s, 1000ms */
+            /* animation-iteration-count: 3; */
+            /* Default(1), number, infinite  */
+            /* animation-timing-function: ease-in; */
+            /* Default(ease), ease-in, ease-out, ease-in-out, linear */
+            /* animation-direction: normal; */
+            /* Default(normal), reverse, alternate, alternate-reverse */
+            /* animation-fill-mode: none; */
+            /* Default(none), forwards, backwards */
+            /* forwards: apply the style at the last keyframe after the animation. */
+            /* backwards: apply the style at the first keyframe before the animation. */
+            /* both: begin at the style specified in the from, end at the style specified at the to */
+            /* transform: translateX(50%); */
+
+            /* == SHORTHAND == */
+            /* animation: [name] [duration] [timing-function] [delay] [iteration-count][direction] [fillmode]; */
+            /* animation: fall 1000ms ease-in 600ms 3 normal none; */
+            animation: bounce 2s ease-in 600ms infinite normal none;
         }
 
         .shadow {
