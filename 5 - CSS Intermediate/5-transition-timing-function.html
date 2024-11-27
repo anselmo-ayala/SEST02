@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transition Timing Function</title>
+    <style>
+        .container {
+            width: 1200px;
+            border: 2px solid black;
+        }
+
+        .style {
+            width: 200px;
+            height: 100px;
+            background-color: #006daa;
+            color: white;
+            margin-bottom: 5px;
+
+            transition-property: transform;
+            transition-duration: 2000ms;
+            transition-delay: 0ms;
+        }
+
+        .style:hover {
+            transform: translateX(1000px);
+
+        }
+
+        .ease {
+            /* Smooth accelaration and deceleration. */
+            transition-timing-function: ease;
+        }
+
+        .linear {
+            /* Constant change throughout the transition. */
+            transition-timing-function: linear;
+        }
+
+        .ease-in {
+            /* Start slow then accelerate towards the end */
+            transition-timing-function: ease-in;
+        }
+
+        .ease-out {
+            /* Start fast and decelarate towards the end. */
+            transition-timing-function: ease-out;
+        }
+
+        .ease-in-out {
+            /* Start slow, accelerate in the middle, decelerate towards the end */
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="style ease">ease</div>
+        <div class="style linear">linear</div>
+        <div class="style ease-in">ease-in</div>
+        <div class="style ease-out">ease-out</div>
+        <div class="style ease-in-out">ease-in-out</div>
+    </div>
+</body>
+
+</html>

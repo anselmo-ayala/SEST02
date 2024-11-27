@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Red Ball with Shadow</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 600px;
+            border: 8px solid black;
+            position: absolute;
+            /* top, bottom, left, right */
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            background-color: #c52233;
+            border: 8px solid #580c1f;
+            border-radius: 50%;
+            position: absolute;
+            /* top, bottom, left, right */
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s ease 600ms infinite normal none;
+        }
+
+        .shadow {
+            width: 100px;
+            height: 50px;
+            background-color: #7272725e;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 37%;
+            transform: translateX(-50%);
+            animation: shadow 2s infinite;
+        }
+
+        @keyframes fall {
+            from {
+                transform: translate(-50%, 0);
+            }
+
+            to {
+                transform: translateX(-50%) translateY(490px);
+            }
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translate(-50%, 0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(490px) scale(1.08, 0.8);
+            }
+
+            100% {
+                transform: translate(-50%, 0);
+            }
+        }
+
+        @keyframes shadow {
+
+            100% {
+                transform: scale(1);
+            }
+
+            0% {
+                transform: scale(0.5);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ball"></div>
+        <div class="shadow"></div>
+    </div>
+</body>
+
+</html>

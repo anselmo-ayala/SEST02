@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Display and Visibility</title>
+    <style>
+        .block-level {
+            background-color: #0d3b66;
+            color: #faf0ca;
+            width: 200px;
+            height: 200px;
+            display: inline;
+        }
+
+        /* display: inline will change it to a inline-level element. */
+        /* width and height property will not apply */
+        .inline-level {
+            background-color: #cc2936;
+            color: #08415c;
+            width: 300px;
+            height: 300px;
+            display: block;
+        }
+
+        /* display: block will change it to a block-level element. */
+        .inline-block {
+            background-color: #0b3866;
+            color: #95f9c3;
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+        }
+
+        /* display: inline-block - this allow the width and height but takes only the space it needs. */
+
+        .none {
+            background-color: #ff5858;
+            color: #ffc8c8;
+            width: 200px;
+            height: 100px;
+            display: none;
+        }
+
+        /* display: none - this will not display the element */
+        /* Elements bellow it will take its position. */
+    </style>
+
+
+</head>
+
+<body>
+    <h1>CSS Display and Visibility</h1>
+    <div class="block-level">This is a block-level element</div>
+    <span class="inline-level">This is an inline-level element.</span>
+    <span class="inline-block">This is an inline-block element.</span>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum hic neque,
+    quibusdam facilis officia quasi delectus. Nihil animi, temporibus magnam
+    atque minima repudiandae rem, nesciunt hic id asperiores natus eaque
+    necessitatibus repellendus voluptates tenetur est cum! Suscipit illum
+    placeat ducimus?
+    <div class="none">This element will not be displayed</div>
+    <div class="hidden">This element will be hidden.</div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum hic neque,
+    quibusdam facilis officia quasi delectus. Nihil animi, temporibus magnam
+    atque minima repudiandae rem, nesciunt hic id asperiores natus eaque
+    necessitatibus repellendus voluptates tenetur est cum! Suscipit illum
+    placeat ducimus?
+</body>
+
+</html>

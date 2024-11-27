@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 600px;
+            border: 8px solid black;
+            position: absolute;
+            /* top, bottom, left, right */
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            background-color: #c52233;
+            border: 8px solid #580c1f;
+            border-radius: 50%;
+            position: absolute;
+            /* top, bottom, left, right */
+            left: 50%;
+            transform: translateX(-50%);
+
+
+            /* == ANIMATION == */
+            /* animation-name: fall; */
+            /* animation-duration: 1000ms; */
+            /* animation-delay: 600ms; */
+            /* values: 1s, 1000ms */
+            /* animation-iteration-count: 3; */
+            /* Default(1), number, infinite  */
+            /* animation-timing-function: ease-in; */
+            /* Default(ease), ease-in, ease-out, ease-in-out, linear */
+            /* animation-direction: normal; */
+            /* Default(normal), reverse, alternate, alternate-reverse */
+            /* animation-fill-mode: none; */
+            /* Default(none), forwards, backwards */
+            /* forwards: apply the style at the last keyframe after the animation. */
+            /* backwards: apply the style at the first keyframe before the animation. */
+            /* both: begin at the style specified in the from, end at the style specified at the to */
+            /* transform: translateX(50%); */
+
+            /* == SHORTHAND == */
+            /* animation: [name] [duration] [timing-function] [delay] [iteration-count][direction] [fillmode]; */
+            animation: bounce 1000ms ease-in 600ms infinite normal none;
+
+
+        }
+
+        @keyframes fall {
+            from {
+                transform: translate(-50%, 0);
+            }
+
+            to {
+                transform: translateX(-50%) translateY(490px);
+            }
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translate(-50%, 0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(490px) scale(1.08, 0.8);
+            }
+
+            100% {
+                transform: translate(-50%, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ball"></div>
+        <div class="shadow"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transitions</title>
+    <style>
+        #box {
+            width: 400px;
+            height: 400px;
+            background-color: #e8c547;
+            color: #30323d;
+            font-size: 4rem;
+            text-align: center;
+            transition-duration: 3000ms;
+            transition-property: background, color, transform;
+            /* s - seconds */
+            /* ms - milliseconds (1000ms = 1s) */
+        }
+
+        #box:hover {
+            background-color: #ff7d00;
+            color: #ffecd1;
+            transform: scale(1.2, 1.2) rotateZ(90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Transitions</h1>
+    <div id="box">Box</div>
+</body>
+
+</html>

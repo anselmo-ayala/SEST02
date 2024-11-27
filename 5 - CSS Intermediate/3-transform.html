@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transform</title>
+    <Style>
+        /* Style all of the boxes */
+        .box {
+            width: 250px;
+            height: 250px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .box1 {
+            background-color: #2a9d8f;
+            color: #264653;
+            /* transform: translateX(200px); */
+            /* negative(left) - positive(right) */
+            /* transform: translateX(100%); */
+            /* transform: translateY(200px); */
+            /* negative(up) - positive(down) */
+            /* translate: (x-axis, y-axis) */
+            transform: translate(300px, 50px);
+        }
+
+        .box2 {
+            background-color: #f18f01;
+            color: #006e90;
+            /* transform: rotateX(45deg); */
+            /* transform: rotateX(90deg); */
+            /* transform: rotateX(135deg); */
+            /* transform: rotateX(180deg); */
+            /* transform: rotateY(45deg); */
+            /* transform: rotateY(90deg); */
+            /* transform: rotateY(135deg); */
+            transform: rotateY(180deg);
+            /* transform: rotateY(360deg); */
+        }
+
+        .box3 {
+            background-color: #e07a5f;
+            color: #f4f1de;
+            transform: scaleX(2);
+            transform: scaleY(2);
+            transform: scale(2, 2);
+            /* 1 - default */
+            margin-bottom: 200px;
+        }
+
+        .box4 {
+            background-color: #e0ff4f;
+            color: #00272b;
+            transform: skewY(45deg);
+            transform: skewX(45deg);
+            /* negative(left) - positive(right) */
+        }
+    </Style>
+</head>
+
+<body>
+    <h1>CSS Transform</h1>
+    <div class="box box1">Translate</div>
+    <div class="box box2">Rotate</div>
+    <div class="box box3">Scale</div>
+    <div class="box box4">Skew</div>
+    <div class="box box5">Combination</div>
+</body>
+
+</html>
