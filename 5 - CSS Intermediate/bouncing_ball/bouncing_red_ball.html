@@ -59,9 +59,8 @@
             border-radius: 50%;
             position: absolute;
             bottom: 0;
-            left: 41%;
-            transform: translateX(-50%);
-            animation: shadow 2s infinite;
+            left: 50%;
+            animation: shadow 2s ease-in 600ms infinite normal none;
         }
 
         @keyframes fall {
@@ -91,11 +90,15 @@
         @keyframes shadow {
 
             100% {
-                transform: scale(1);
+                transform: translateX(-50%) scale(0.5, 0.5);
+            }
+
+            50% {
+                transform: translateX(-50%) scale(1, 1);
             }
 
             0% {
-                transform: scale(0.5);
+                transform: translateX(-50%) scale(0.5, 0.5);
             }
         }
     </style>
