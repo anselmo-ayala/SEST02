@@ -1,0 +1,76 @@
+body {
+  background-color: #f4f1de;
+}
+
+/* Child */
+.gridItem {
+  background-color: #e07a5f;
+  border: 4px solid #3d405b;
+  color: #f4f1de;
+  padding: 20px;
+  font-size: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 0px 8px #3d405b;
+}
+
+/* Parent */
+.gridContainer {
+  border: 8px solid #81b29a;
+
+  display: grid;
+  /* Using PX */
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px 200px;
+
+  /* Using auto */
+  /* Adjust the width and height based on the content */
+  grid-template-columns: auto auto auto auto;
+  /* grid-template-rows: auto auto auto auto; */
+
+  /* Using percentage */
+  /* grid-template-columns: 33% 33% 33%;  = 99% */
+  grid-template-columns: 25% 25% 25% 25%;
+
+  /* Using Fr - Fractional Units */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  /* Using repeat(number_of_times, unit_of_measurement) */
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+
+  /* grid-template-areas- specify the layout without using the lines */
+  grid-template-areas:
+    "header header header header header header"
+    "sidebar sidebar main main main main"
+    "sidebar sidebar main main main main"
+    "sidebar sidebar main main main main"
+    "sidebar sidebar main main main main"
+    "footer footer footer footer footer footer";
+}
+
+.gridItem1 {
+  /* grid-row-start: 1; */
+  /* grid-row-end: 2; */
+  /* grid-column-start: 1; */
+  /* grid-column-end: 7; */
+  grid-area: header;
+}
+.gridItem2 {
+  /* [row-start] / [row-end] */
+  /* grid-row: 2 / 6; */
+  /* [column-start] / [column-end] */
+  /* grid-column: 1 / 3; */
+  grid-area: sidebar;
+
+}
+.gridItem3 {
+  /* grid-row: span 4; */
+  /* grid-column: span 4; */
+  grid-area: main;
+}
+.gridItem4 {
+  /* [row-start] / [column-start] / [row-end] / [column-end] */
+  /* grid-area: 6 / 1 / 7 / 7; */
+  grid-area: footer;
+}

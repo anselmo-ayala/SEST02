@@ -1,0 +1,60 @@
+body {
+  background-color: #f4f1de;
+}
+/* Child */
+.card {
+  background-color: #e07a5f;
+  border: 4px solid #3d405b;
+  color: #f4f1de;
+  padding: 20px;
+  font-size: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 0px 8px #3d405b;
+}
+/* Parent */
+.parent {
+  border: 8px solid #81b29a;
+}
+
+/* Media Queries */
+/* 
+  Mobile Devices: Less than 481px
+  iPads, Tablets: 481px - 768px
+  Small Screens, Laptops: 769px - 1024px
+  Desktops, Large Screens: 1025px - 1200px
+  Extra Large Screens, TV: 1201px and greater
+*/
+
+/* Desktops, Large Screens, Extra Large Screens, TV */
+@media screen and (min-width: 1025px) {
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .card {
+    background-color: #bc4749;
+  }
+}
+
+/*  iPads, Tablets, Small Screens, Laptops */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .card {
+    background-color: #a8dadc;
+  }
+}
+
+/*  Mobile Devices */
+@media screen and (max-width: 480px) {
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card {
+    background-color: #e63946;
+  }
+}

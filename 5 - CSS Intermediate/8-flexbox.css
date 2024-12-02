@@ -1,0 +1,82 @@
+/* Parent Container */
+.container {
+  height: 400px;
+  background-color: #2a9d8f;
+}
+
+/* Child */
+.items {
+  width: 200px;
+  background-color: #e9c46a;
+  border: 4px solid #e76f51;
+  font-size: 2rem;
+  color: #264653;
+  text-align: center;
+}
+
+.flexContainer {
+  display: flex;
+  /* flex-direction: row; (Default) */
+  /* flex-direction: column; */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column-reverse; */
+  /* justify-content: allows you to align items in the main axis */
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  justify-content: flex-end;
+  justify-content: center;
+  justify-content: flex-start; /* Default */
+  align-items: flex-end;
+  align-items: flex-start;
+  align-items: center;
+  align-items: stretch; /* Default */
+
+  /* Wrap our content */
+  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  /* This will only work when items are wrapping */
+  /* Turn the flex-wrap: wrap */
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: center; */
+  /* align-content: space-between; */
+  /* align-content: space-around; */
+  /* align-content: space-evenly; */
+
+  /* Column and Row Gap */
+  column-gap: 10px;
+  row-gap: 10px;
+  gap: 20px;
+}
+
+/* align-self: align a single child */
+/* .flexItem2 {
+  align-self: flex-end;
+  align-self: flex-start;
+  align-self: center;
+} */
+
+/* Willingness to shrink and grow */
+.flexItem2 {
+  /* flex-grow: 0; Default */
+  flex-grow: 2;
+  /* More willing to Grow */
+  flex-grow: 1;
+  /* Willing to Grow */
+  flex-shrink: 1;
+  /* Default: Willing to Shrink */
+  flex-shrink: 0;
+  /* Not willing to Shrink */
+  /* flex-basis: change the width of the item */
+  flex-basis: 400px;
+
+  /* SHORTHAND */
+  /* flex: [flex-grow] [flex-shrink(Optional)] [flex-basis(Optional)]; */
+  flex: 1 1 600px;
+
+  order: -1; /* Beginning */
+  order: 1; /* End */
+  order: 0; /* Default */
+}
