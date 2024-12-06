@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Comparison and Logical Operator</title>
+  </head>
+  <body>
+    <h1>JS Comparison and Logical Operator</h1>
+    <script>
+      // Comparison Operators
+      // Return: true or false
+      const num1 = 5;
+      const num2 = 10;
+
+      console.log(`Equal to(==): ${num1 == 5}`);
+      console.log(`Equal to(==): ${num1 == num2}`);
+
+      // type coercion: converting the data type if necessary
+      console.log(`Equal to with Type Coercion (==): ${num1 == "5"}`);
+
+      // Not Equal to (!=): check if two values are not equal
+      console.log(`Not Equal to(!=): ${num1 != 5}`);
+      console.log(`Not Equal to(!=): ${num1 != num2}`);
+
+      console.log(`Not Equal to with Type Coercion (==): ${num1 != "5"}`);
+
+      // Strict Equal to (===): check if the two values are equal in data type and value
+      console.log(`Strict Equal to(===): ${num1 === 5}`);
+      console.log(`Strict Equal to(===): ${num1 === num2}`);
+      console.log(`Strict Equal to(===): ${num1 === "5"}`);
+
+      // Strict Not Equal to (!==): check if the two values are not equal in data type and value
+      console.log(`Strict Not Equal to(!==): ${num1 !== 5}`);
+      console.log(`Strict Not Equal to(!==): ${num1 !== num2}`);
+      console.log(`Strict Not Equal to(!==): ${num1 !== "5"}`);
+
+      console.log(`Greater Than: ${num1 > num2}`);
+      console.log(`Greater Than: ${num2 > num1}`);
+      console.log(`Less Than: ${num1 < num2}`);
+      console.log(`Less Than: ${num2 < num1}`);
+
+      console.log(`Greater Than or Equal to: ${num1 >= num2}`);
+      console.log(`Greater Than or Equal to: ${num2 >= num1}`);
+      console.log(`Less Than or Equal to: ${num1 <= num2}`);
+      console.log(`Less Than or Equal to: ${num2 <= num1}`);
+
+      // Logical Operators
+      // AND, OR, NOT
+      // AND - &&
+      // OR - ||
+      // NOT - !
+
+      const sunny = true;
+      const warm = true;
+
+      // AND: true only if all of variables is true, otherwise false
+      console.log(`Is it sunny AND warm? ${sunny && warm}`);
+
+      // OR: true if atleast one of the variables is true, otherwise false
+      console.log(`Is it sunny OR warm? ${sunny || warm}`);
+
+      // NOT: invert the value of a boolean
+      console.log(`Not sunny: ${sunny}`);
+    </script>
+  </body>
+</html>

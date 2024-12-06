@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Explicit Type Coercion</title>
+  </head>
+  <body>
+    <h1>JS Explicit Type Coercion</h1>
+    <script>
+      // Implicit type coercion (Equal to (==), Not Equal to (!=)): automatically convert the data type if necessary.
+      // Explicit type coercion:
+
+      const string = "30";
+      console.log(`Data Type: ${typeof string}`);
+
+      // Number(): convert a string to number
+      const stringToNumber = Number(string);
+      console.log(`String to Number: ${stringToNumber}`);
+      console.log(`Data Type: ${typeof stringToNumber}`);
+
+      const number = 30;
+      console.log(`Number: ${number}`);
+      console.log(`Data Type: ${typeof number}`);
+
+      // String(): convert to a string
+      const numberToString = String(number);
+      console.log(`Number to String: ${numberToString}`);
+      console.log(`Data Type: ${typeof numberToString}`);
+
+      // Boolean(): convert to a boolean (true, false)
+      // Truthy and Falsy Values
+      // Falsy Values: 0, null, undefined, NaN, ""
+      // Truthy Values: everything else
+      const binary = 1;
+      const greeting = "Hi";
+
+      const numberToBoolean = Boolean(binary);
+      console.log(`Binary: ${numberToBoolean}`);
+      console.log(`Data Type: ${typeof numberToBoolean}`);
+
+      const stringToBoolean = Boolean(greeting);
+      console.log(`String: ${stringToBoolean}`);
+      console.log(`Data Type: ${typeof stringToBoolean}`);
+
+      // Global Methods
+      // parseInt(): parse a string and return an interger
+      const stringWithNumber = "1234";
+      const address = "324 Main Ave. Example Street";
+
+      const stringParseToNumber = parseInt(stringWithNumber);
+      console.log(`ParseInt: ${stringParseToNumber}`);
+      console.log(`Data Type: ${typeof stringParseToNumber}`);
+
+      const addressParseToNumber = parseInt(address);
+      console.log(`ParseInt: ${addressParseToNumber}`);
+      console.log(`Data Type: ${typeof addressParseToNumber}`);
+
+      // parseFloat(): parase a string and return a floating-point number
+      const stringWithFloat = "99.99 per piece";
+      const stringWithInt = parseInt(stringWithFloat);
+      const stringToFloat = parseFloat(stringWithFloat);
+      console.log(`ParseInt: ${stringWithInt}`);
+      console.log(`ParseFloat: ${stringToFloat}`);
+      console.log(`Data Type: ${typeof stringToFloat}`);
+
+      // isNaN(): Check if a value is Not A Number
+      const notANumber = NaN;
+      console.log(`isNaN: ${isNaN(notANumber)}`);
+
+      // isFinite(): Check if a value is a finite number
+      const infiniteNumber = Infinity;
+      console.log(`isFinite: ${isFinite(infiniteNumber)}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Variables</title>
+  </head>
+  <body>
+    <h1>JavaScript Key Points</h1>
+    <ul>
+      <li>
+        <strong>Statements:</strong> JavaScript code is composed of statements
+        that perform specific actions. Each statement typically ends with a
+        semicolon (;), although it is not always required.
+      </li>
+      <li>
+        <strong>Comments: </strong> You can add comments in JavaScript to
+        provide explanations or make notes within the code. There are two types
+        of comments: single-line comments, starting with //, and multi-line
+        comments, enclosed between /* and */.
+      </li>
+      <li>
+        <strong>Case sensitivity</strong> JavaScript is case-sensitive, meaning
+        that uppercase and lowercase letters are treated differently. For
+        example, "variable" and "Variable" would be considered as two separate
+        variables.
+      </li>
+      <li>
+        <strong>Whitespace</strong> JavaScript ignores spaces, tabs, and line
+        breaks (collectively called whitespace) that are not necessary for code
+        execution. However, whitespace can enhance code readability.
+      </li>
+      <li>
+        <strong>Blocks: </strong> Code blocks in JavaScript are enclosed in
+        curly braces ({}) and are used to group statements together. Blocks are
+        often used in control structures like loops and conditional statements.
+      </li>
+    </ul>
+    <script>
+      console.log("Hello World!");
+      // This is a single-line comment.
+      /* This is a 
+      multi-line
+      comment */
+
+      // Camel Case Naming Convention
+
+      // Variables
+      // var - mutable/changeable - global scope
+      // let - mutable/changeable - block scope
+      // const - unmutable/unchangeable - block scope
+      var firstName = "John";
+      console.log("Firstname:", firstName);
+      firstName = "Jane";
+      console.log("Firstname:", firstName);
+
+      let lastName = "Doe";
+      console.log("Lastname:", lastName);
+      lastName = "Smith";
+      console.log("Lastname:", lastName);
+
+      const birthday = "02-14-2000";
+      console.log("Birthday:", birthday);
+      // birthday = "02-15-2000"; TypeError: Assignment to constant variable.
+
+      // {} - Code Block
+      {
+        var email = "janesmith30@example.com";
+        let username = "janesmith30";
+        const pi = 3.14;
+        console.log("Email:", email);
+        console.log("Username:", username);
+        console.log("Pi:", pi);
+      }
+      console.log("Email:", email);
+      // console.log("Username:", username); ReferenceError: username is not defined
+      // console.log("Pi:", pi); ReferenceError: username is not defined
+    </script>
+  </body>
+</html>

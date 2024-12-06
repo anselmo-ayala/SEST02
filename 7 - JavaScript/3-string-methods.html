@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS String and String Methods</title>
+  </head>
+  <body>
+    <h1>JS String and String Methods</h1>
+    <script>
+      // String Concatenation
+      const greeting = "Hi";
+      const name = "Joshua";
+      console.log(greeting + " " + name + "!");
+
+      // Template Literals
+      console.log(`${greeting} ${name}!`);
+
+      const course = "Full-Stack Web Development";
+      console.log(course);
+
+      // length: returns the length of the string
+      console.log(`Length: ${course.length}`);
+
+      // .toLowerCase(): convert the string in lowercase
+      console.log(`Lowercase: ${course.toLowerCase()}`);
+
+      // properties: information about an object
+      // method: functionality tied to the object
+
+      // .toUpperCase(): convert the string in uppercase
+      console.log(`Uppercase: ${course.toUpperCase()}`);
+
+      console.log(course);
+      // .slice(start(included), end(excluded))
+      console.log(`Slice: ${course.slice(0, 10)}`);
+      console.log(`Slice (Negative): ${course.slice(-11)}`);
+      // Start counting at the end
+
+      // .substring(start(included), end(excluded)) : Extract a section of the string
+      console.log(`Substring: ${course.substring(11, 14)}`);
+      console.log(`Substring (Negative): ${course.substring(-11)}`);
+      // Consider the negative value to be starting from the beginning
+
+      // .substr(start(inclusive), length)
+      console.log(`Substr: ${course.substr(0, 4)}`);
+
+      // Searching
+      // .includes(string): check if a string exist (case-sensitive)
+      console.log(`Includes: ${course.includes("Stack")}`);
+
+      // .indexOf(string):  return the first occurance of the string
+      // Return: Index or -1(It doesn't exist)
+      console.log(`IndexOf: ${course.indexOf("Stack")}`);
+      console.log(`IndexOf: ${course.indexOf("e")}`);
+
+      // .lastIndexOf(string):  return the last occurance of the string
+      console.log(`LastIndexOf: ${course.lastIndexOf("e")}`);
+
+      // .replace(stringToReplace, newString)
+      console.log(`Replace: ${course.replace("Web", "Website")}`);
+
+      const addToTheCourse = " is Awesome!";
+      // .concat(string): concatenates two or more strings
+      console.log(`Concat: ${course.concat(addToTheCourse, "!!!")}`);
+
+      // .split(): split a string into substrings
+      console.log(`Split: ${course.split(" ")}`);
+
+      // .trim(): remove the whitespace from both ends of the string
+      const message = "        Hello World!            ";
+      console.log(`Trim Start: ${message.trimStart()}`);
+      console.log(`Trim End: ${message.trimEnd()}`);
+      console.log(`Trim: ${message.trim()}`);
+    </script>
+  </body>
+</html>

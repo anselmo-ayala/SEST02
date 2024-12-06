@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Math Methods</title>
+  </head>
+  <body>
+    <h1>JS Math Methods</h1>
+    <script>
+      // Math module - built-in object with a collection of properties and methods for mathematical operations.
+
+      const num1 = 3.6;
+      const num2 = 3.2;
+
+      // .round(): round the floating point value to the nearest integer.
+      const roundedValue = Math.round(num2);
+      console.log(`Round: ${roundedValue}`);
+
+      // .floor(): rounds down a loating point value to the nearest integer.
+      const roundDown = Math.floor(num2);
+      console.log(`Round Down: ${roundDown}`);
+
+      // .ceil(): rounds up a loating point value to the nearest integer.
+      const roundUp = Math.ceil(num2);
+      console.log(`Round Up: ${roundUp}`);
+
+      // .trunc(): remove the decimal part of a number
+      const num3 = 4.2521346634;
+      const truncate = Math.trunc(num3);
+      console.log(`Truncate: ${truncate}`);
+
+      // .pow(): return the result of a number raised to the power of another number
+      const powerResult = Math.pow(2, 3);
+      console.log(`2 Raise to the Power of 3: ${powerResult}`);
+
+      // .abs(): returns the absolute value of a number.
+      // Distance from 0.
+      const num4 = -5;
+      const absoluteValue = Math.abs(num4);
+      console.log(`Absolute: ${absoluteValue}`);
+
+      // .sqrt(): return the square root of a number
+      const squareRoot = Math.sqrt(64);
+      console.log(`Square Root of 64: ${squareRoot}`);
+
+      const num5 = 10;
+      const num6 = 5;
+      const num7 = 20;
+
+      // .max(): return the largest number
+      const maxNumber = Math.max(num5, num6, num7);
+      console.log(`Max: ${maxNumber}`);
+
+      // .min(): return the smallest number
+      const minNumber = Math.min(num5, num6, num7);
+      console.log(`Min: ${minNumber}`);
+
+      // .random(): generate a floating-point number in between 0 and 1
+      const randomNumber = Math.random();
+      console.log(`Random: ${randomNumber}`);
+
+      // Return random number from 1 to 10.
+      const minimumNumber = 1;
+      const maximumNumber = 10;
+
+      randomWholeNumber =
+        Math.floor(Math.random() * (maximumNumber - minimumNumber + 1)) +
+        minimumNumber;
+      console.log(Math.trunc(randomWholeNumber));
+    </script>
+  </body>
+</html>
