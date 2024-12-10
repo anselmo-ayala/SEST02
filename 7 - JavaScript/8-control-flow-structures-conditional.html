@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Control Flow Structures - Conditional</title>
+</head>
+
+<body>
+    <h1>JS Control Flow Structures - Conditional</h1>
+    <script>
+        // Control Flow Structures
+        // Conditional Statements
+        // Allow us to execute a block of code based on a condition.
+        // 1. if, else if, else statement
+        // {} - Code Block
+        // () - Condition Block
+        let temperature = 30;
+        if (temperature < 0) {
+            console.log("It's freezing");
+        } else if (temperature >= 0 && temperature < 20) {
+            // Range: 0 - 19
+            console.log("It's cool outside.");
+        } else if (temperature >= 20 && temperature < 30) {
+            // Range: 20 - 29
+            console.log("It's warm outside.");
+            console.log("Time for an ice cream break.");
+        } else {
+            console.log("It's hot outside.");
+        }
+
+        let isWeekend = false;
+        let isRaining = true;
+        if (isWeekend && !isRaining) {
+            console.log("Let's go for a bike!");
+        } else if (isWeekend && isRaining) {
+            console.log("Time for a movie marathon.");
+        } else if (!isWeekend && !isRaining) {
+            console.log("Back to work.");
+        } else {
+            console.log("Stay indoors and relax.");
+        }
+
+        // If age is greater than or equal to 18, log in the console. You are eligable to vote. Otherwise, you are not eligable to vote.
+        //   let age = 17;
+        //   let message = "";
+        //   if (age >= 18) {
+        //     message = "You are eligible to vote.";
+        //   } else {
+        //     message = "You are not eligible to vote.";
+        //   }
+        //   console.log(message);
+        // Ternary Operator:
+        let age = 16;
+        let message =
+            age >= 18
+                ? "You are eligable to vote"
+                : "You are not eligable to vote.";
+        console.log(message);
+
+        // 2. switch-case statement
+        let day = "Sunday";
+        switch (day) {
+            case "Monday":
+                console.log("It's the start of the week.");
+                break;
+            case "Friday":
+                console.log("It's the end of the weekdays.");
+                break;
+            default:
+                console.log("It's a normal day.");
+        }
+
+
+
+    </script>
+</body>
+
+</html>

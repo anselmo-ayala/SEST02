@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Functions</title>
+</head>
+
+<body>
+    <h1>JS Functions</h1>
+    <script>
+        // Functions: block of code that performs a specific task
+        function great() {
+            console.log("Hello, welcome to the world of functions;");
+            console.log("Let's goo!!!");
+        }
+
+        great();
+        great();
+        great();
+
+        //  2. Function Definition with parameters
+        // parameters: placeholder
+        // arguments: values passed to a function's parameters.
+        function greetIndividual(name) {
+            console.log(`Hello ${name}. Welcome to world of functions!`);
+        }
+        greetIndividual("John Vincent");
+
+        // Functions with different arguments
+        function addTwoNumbers(num1, num2) {
+            return num1 + num2;
+        }
+        console.log("Sum of 10 and 20:", addTwoNumbers(10, 20));
+        console.log("Sum of 30 and 40:", addTwoNumbers(30, 40));
+        let answer = addTwoNumbers(100, 200);
+        console.log("Answer:", answer);
+
+        // Functions with Default Parameters
+        function power(base, exponent = 2) {
+            return base ** exponent;
+        }
+        console.log("3 Raise to power of 3:", power(3, 3));
+        console.log("4 Raise to the power of 3:", power(4, 3));
+        console.log("Only one argument:", power(4));
+
+        // Function that can accept multiple arguments.
+        function sumTotal() {
+            // return num1 + num2;
+            console.log(arguments);
+            let total = 0;
+            // Initialization Expression
+            // Condition Expression
+            // Increment/Decrement Expression
+            for (let i = 0; i < arguments.length; i++) {
+                total += arguments[i];
+            }
+            console.log("Total:", total);
+        }
+        sumTotal(10, 20, 30, 40, 50);
+
+
+
+    </script>
+</body>
+
+</html>

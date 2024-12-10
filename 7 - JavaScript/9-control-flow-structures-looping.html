@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Control Flow Structures - Looping</title>
+</head>
+
+<body>
+    <h1>JS Control Flow Structures - Looping</h1>
+    <script>
+        // Looping Statements
+        // Repeatedly execute a block of code over and over again.
+
+        // NOTE: auto-save off
+        // for loop - loop through a block of code a number of times.
+
+
+        // "components/expressions" of a for loop
+        // 1st: Initial Expression
+        // 2nd: Condition Expression
+        // 3rd: Increment/Decrement Expression
+        // i: Loop Variable
+        for (let i = 1; i <= 3; i++) {
+            console.log(`For Loop count: ${i}`);
+        }
+        console.log("=== WHILE LOOP ===");
+
+        // For Loop: Print all even numbers from 1 - 10
+        for (let i = 1; i <= 10; i++) {
+            // If you only have 1 statement, you can remove the {}
+            if (i % 2 == 0) console.log(`For Loop Count: ${i}`);
+        }
+
+        // While Loop: loop through a block of code while a specified condition is true
+        console.log("=== WHILE LOOP ===");
+        let count = 1;
+        while (count <= 3) {
+            console.log(`While loop count: ${count}`);
+            count++;
+        }
+
+
+        // Do-While Loop:
+        // execute the code atleast once
+        console.log("=== DO WHILE LOOP ===");
+        let counter = 4;
+        do {
+            console.log(`Do while loop count: ${counter}`);
+            counter++;
+        } while (counter <= 3);
+
+        // Break and Continue
+        let i = 1;
+        while (i <= 10) {
+            if (i % 2 == 0) {
+                i++;
+                continue;
+            }
+            if (i == 7) break;
+            console.log(`While Loop Count: ${i}`);
+            i++;
+        }
+
+    </script>
+</body>
+
+</html>
