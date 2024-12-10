@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 1</title>
+</head>
+
+<body>
+    <h1>ACTIVITY 1: Grade Calculator</h1>
+    <p>
+        In this activity, the user is prompted to enter a score. Based on the
+        score entered, the code uses conditional statements (if, else if, and
+        else) to determine the corresponding grade.
+    </p>
+    <ul>
+        <li>If the score is 90 or above, it assigns the grade 'A'.</li>
+        <li>If the score is between 80 and 89, it assigns the grade 'B'.</li>
+        <li>If the score is between 70 and 79, it assigns the grade 'C'.</li>
+        <li>If the score is between 60 and 69, it assigns the grade 'D'.</li>
+        <li>Otherwise, if the score is below 60, it assigns the grade 'F'.</li>
+        <li>The grade is then printed to the console.</li>
+    </ul>
+
+    <h1>Simple Grading System</h1>
+    <button onclick="getGrade()">Enter Grade Score</button>
+
+</body>
+
+<script>
+
+    function getGrade() {
+
+        // Prompt the user to input the score
+        let score = prompt("Enter the score:");
+
+        // Converting the input to a number
+        score = parseFloat(score);
+
+        // Variables
+        let grade;
+
+        // If else statement
+        if (score >= 90) {
+            grade = 'A';
+        } else if (score >= 80) {
+            grade = 'B';
+        } else if (score >= 70) {
+            grade = 'C';
+        } else if (score >= 60) {
+            grade = 'D';
+        } else if (score <= 60) {
+            grade = 'F';
+        } else {
+            grade = 'Invalid Grade';
+        }
+
+        // Output the grade
+        alert("The grade is: " + grade);
+    }
+</script>
+
+</html>
