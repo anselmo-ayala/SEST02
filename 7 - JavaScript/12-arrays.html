@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Arrays and Array Methods</title>
+</head>
+
+<body>
+    <h1>JS Arrays and Array Methods</h1>
+    <script>
+
+        // Reference Data Type - Array
+        let fruits = [
+            "Apple",
+            "Banana",
+            "Cherry",
+            "Durian",
+            "Watermelon",
+            "Avocado",
+            "Mango",
+        ];
+        console.log("Array Fruit:", fruits);
+        console.log("Data Type of Fruits:", typeof fruits);
+        // Check the length of the array
+        console.log(`Length: ${fruits.length}`);
+        console.log(`Index of 3: ${fruits[3]}`);
+        console.log(`Last element: ${fruits[fruits.length - 1]}`);
+
+        // .at(): access an element using its index.
+        console.log(`Index of 3: ${fruits.at(3)}`);
+
+        // Method: function that belongs to an object (array)
+        // .join(): combine all elements and return a string
+        console.log(`Join: ${fruits.join("-")}`);
+
+        // .slice(start, end(exluded)): access a portion of the array
+        console.log(`Slice: ${fruits.slice(2, 5)}`);
+        console.log(`Original Fruits: ${fruits}`); // This will not affect the original
+        // Update Elements
+        fruits[2] = "Lemon";
+        console.log("Original Fruits:", fruits);
+
+        // Adding Elements
+        // .push(...items): Add an element/s at the end of the array
+        fruits.push("Cherry", "Dalandan");
+        console.log("Original Fruits:", fruits);
+
+        // .unshift(...items): Add an element/s at the start of the array
+        fruits.unshift("Strawberry");
+        console.log("Original Fruits:", fruits);
+
+        // .splice(start, deleteCount?, element/s): add or delete element/s in a specified index
+        fruits.splice(7, 0, "Pineapple", "Lychee");
+        console.log("Original Fruits:", fruits);
+
+        // Delete Elements
+        // .pop(): Delete an element at the end of the array
+        let poppedFruit = fruits.pop();
+        console.log("Original Fruits:", fruits);
+        console.log("Popped Fruit:", poppedFruit);
+
+        // .shift(): Delete an element at the start of the array
+        fruits.shift();
+        console.log("Original Fruits:", fruits);
+
+        // .splice(start, deleteCount?:number, ...items): add or delete element/s in a specified index
+        fruits.splice(4, 3, "Strawberry", "Rambutan");
+        console.log("Original Fruits:", fruits);
+
+        // Searching Elements
+        // .includes(element): check if the element is included in the array
+        // Return: true or false
+        console.log("Is Mango included in the fruits:", fruits.includes("Mango"));
+
+        fruits.push("Strawberry");
+        console.log("Original Fruits:", fruits);
+        // .indexOf(): return the index of the element if it exist, otherwise -1
+        // Return: Index of the element / -1
+        console.log(`Index of Strawberry: ${fruits.indexOf("Strawberry")}`);
+        // .lastIndexOf(): return the index of the last instance of element if it exist, otherwise -1
+        console.log(
+            `Last Index of Strawberry: ${fruits.lastIndexOf("Strawberry")}`
+        );
+
+        // Sorting
+        // .reverse(): reverse the order of the array
+        fruits.reverse();
+        console.log("Reverse Fruits:", fruits);
+        // .sort(): sort the array in alphabetical order/numerical order.
+        // Default: Ascending Order
+        fruits.sort();
+        console.log("Ascending Order Fruits:", fruits);
+        // Descending Order
+        fruits.sort().reverse();
+        console.log("Descending Order Fruits:", fruits);
+
+        let odds = [1, 3, 5, 7, 9];
+        let evens = [2, 4, 6, 8, 10];
+        let oddsAndEvens = odds.concat(evens);
+        console.log("Odds and Evens:", oddsAndEvens);
+        console.log("Odds:", odds); // This will not affect the original.
+
+        // .toString(): convert an array to a comma-seperated string
+        console.log("Odd and Even strings:", oddsAndEvens.toString());
+
+        // .forEach(): iterate over element in an array
+        // In each iteration execute a function.
+        console.log("Evens:", evens);
+        console.log("== FOR EACH ==");
+        evens.forEach(function (number) {
+            console.log(number);
+        });
+
+        // .map(): create a new array by applying a function to each element of the original array
+        console.log("== MAP ==");
+        let squaredEvensArray = evens.map((number) => number * number);
+        console.log("Squared Evens Array:", squaredEvensArray);
+
+
+        // .filter(): create a new array with elements that passed the test condition.
+        oddsAndEvens.pop();
+        console.log(oddsAndEvens.sort());
+        let evenNumbers = oddsAndEvens.filter((number) => number % 2 == 0);
+        console.log("Even Numbers:", evenNumbers);
+        let oddNumbers = oddsAndEvens.filter((number) => number % 2 == 1);
+        console.log("Odd Numbers:", oddNumbers);
+
+        // .some(): returns true if atleast one element passed the test condition
+        console.log("Fruits", fruits);
+        const queryFruit = "MANGO";
+        let isMangoIncluded = fruits.some(
+            (fruit) => fruit.toLowerCase() === queryFruit.toLowerCase()
+        );
+        console.log("Result:", isMangoIncluded);
+
+        // .every(): returns true if all of the element passed the test condition
+        console.log("Evens", evens);
+        let isAllEven = evens.every((number) => number % 2 == 0);
+        console.log("Is All Even Result:", isAllEven);
+
+        console.log("Odds and Evens", oddsAndEvens);
+        // .reduced(): combine elements into a single value.
+        let total = oddsAndEvens.reduce((total, number) => total + number, 0);
+        console.log("Total:", total);
+
+        // .find(): return the first element that pass the test condition
+        let firstNumberGreaterThanFive = oddsAndEvens.find(
+            (number) => number > 5
+        );
+        console.log("First number greater than 5:", firstNumberGreaterThanFive);
+
+        // .findIndex(): return the index of the first element that pass the test condition
+        let indexOfFirstNumberGreaterThanFive = oddsAndEvens.findIndex(
+            (number) => number > 5
+        );
+        console.log(
+            "Index of the First number greater than 5:",
+            indexOfFirstNumberGreaterThanFive
+        );
+
+        console.log("Evens", evens);
+        console.log("Odss", odds);
+
+        // Spread Operator
+        let evenOddCombined = [...odds, ...evens];
+        console.log("Combined:", evenOddCombined);
+
+        // for of loop
+        console.log("Fruits", fruits);
+        for (let fruit of fruits) {
+            console.log("Fruit:", fruit);
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

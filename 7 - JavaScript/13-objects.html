@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Objects and Object Methods</title>
+</head>
+
+<body>
+    <h1>JS Objects and Object Methods</h1>
+
+
+    <script>
+
+        const person = {
+            firstName: "Bruno",
+            lastName: "Mars",
+            age: 30,
+            talent: ["Singer", "Songwriter", "Dancer"],
+            // Function Definition
+            sing: function () {
+                console.log("Bruno is singing");
+            },
+            // Enhanced Object Literals
+            dance() {
+                console.log("Bruno is dancing.");
+            },
+            // Function (Method) that can acess the properties of an object
+            introduce() {
+                console.log(`I am ${this.firstName} ${this.lastName}!`);
+            },
+        };
+
+        console.log("Person:", person);
+        // Access Objects properties
+        console.log("Firstname:", person["firstName"]);
+        console.log("Lastname:", person["lastName"]);
+
+        // Using the dot notation
+        console.log("Age:", person.age);
+        console.log("Talent:", person.talent);
+        person.sing();
+
+        // Modify the objects properties
+        person.age = 31;
+        console.log("Age:", person.age);
+
+        // Method created using Enhanced Object Literal
+        person.dance();
+
+        // Method that uses object properties.
+        person.introduce();
+
+        // Adding a new property (key:value)
+        person.gender = "Male";
+        console.log("Gender:", person.gender);
+        // Adding a new method (function)
+        person.greet = function () {
+            console.log("Hello! Welcome to world of objects.");
+        };
+        person.greet();
+        console.log("Person:", person);
+
+        // Nested Objects
+        const address = {
+            street: "123 Example Street",
+            city: "Example City",
+            country: "Example Country",
+        };
+        person.address = address;
+        console.log("Person:", person);
+        // Access a property that is inside of a nested object
+        console.log("Person Address:", person.address);
+        console.log("City of Person:", person.address.city);
+
+        // Destructuring
+        //   let firstName = person.firstName;
+        //   let lastName = person.lastName;
+        //   console.log(firstName, lastName);
+        // Note: variable will be the key in the object
+        const { firstName, lastName, talent, age } = person;
+        console.log("Firstname:", firstName);
+        console.log("Lastname:", lastName);
+        console.log("Talents:", talent);
+        console.log("Age:", age);
+
+        // Destructuring in Arrays
+        let numbers = [10, 20, 30];
+        const [first, second, third] = numbers;
+        console.log("First Number:", first);
+        console.log("Third Number:", third);
+
+        // Spread Operator
+        const grades = {
+            math: 94,
+            science: 72,
+            english: 81,
+            pe: 99,
+        };
+        const gradesWithEC = {
+            ...grades,
+            extraCurricular: 85,
+        };
+        console.log("Grades with Extra Curricular:", gradesWithEC);
+
+        // Object.keys(object) - return the keys of an object in an array.
+        const keys = Object.keys(person);
+        console.log("Keys:", keys);
+
+        // Object.values(object) -return the values of an object in an array.
+        const values = Object.values(person);
+        console.log("Values:", values);
+
+        // Object.entries(object) - return the key and value pair of an object in a nested array.
+        const keyValuePair = Object.entries(person);
+        console.log("Key Value Pair:", keyValuePair);
+
+        // Object.assign()
+        const information1 = {
+            firstName: "Alice",
+            lastName: "Johnson",
+        };
+        const information2 = {
+            age: 30,
+            city: "New York",
+        };
+        const combinedInformation = Object.assign(information1, information2);
+        console.log("Combined Information:", combinedInformation);
+
+        // Object.freeze(object) - prevent modification to an object and its properties
+        console.log("Person Age:", person.age);
+        Object.freeze(person);
+        person.age = 33; // This will not work
+        console.log("Person Age:", person.age);
+
+        // JSON.stringify
+
+        console.log(typeof person);
+        let personString = JSON.stringify(person);
+        console.log("Person String:", personString);
+        console.log("Data Type:", typeof personString);
+
+        // JSON.parse
+        let personStringToObject = JSON.parse(personString);
+        console.log("Person Object:", personStringToObject);
+        console.log("Data Type:", typeof personStringToObject);
+
+        // for in loop - iterate through the keys of an object
+        for (let key in person) {
+            console.log(`Key: ${key}, Value: ${person[key]}`);
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
