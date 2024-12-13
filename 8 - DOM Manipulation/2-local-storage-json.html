@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage and JSON</title>
+  </head>
+  <body>
+    <h1>Local Storage and JSON</h1>
+    <script>
+      // Local Storage: store data locally within our browser.
+
+      // Function used to check if localStorage is supported.
+      function isLocalStorageSupported() {
+        return typeof localStorage !== undefined && localStorage !== null;
+      }
+
+      console.log(isLocalStorageSupported());
+
+      // Create an object
+      const user = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 30,
+      };
+      console.log("User:", user);
+      console.log("Data Type:", typeof user);
+
+      const serializedValue = JSON.stringify(user);
+      console.log("Serialized Value:", serializedValue);
+      console.log("Data Type:", typeof serializedValue);
+
+      // Add a key and value in the local storage
+      localStorage.setItem("user", serializedValue);
+
+      // Retrieve a key and value in localStorage
+      const value = localStorage.getItem("user");
+      console.log("Local Storage User:", value);
+      const deserializedValue = JSON.parse(value);
+      console.log("Deserialized Value:", deserializedValue);
+      console.log("Data Type:", typeof deserializedValue);
+
+      // Remove Data
+      localStorage.removeItem("user");
+    </script>
+  </body>
+</html>

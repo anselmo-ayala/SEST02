@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+    <style>
+      #page-container {
+        width: 300px;
+        height: 300px;
+        background-color: azure;
+        border: 2px solid rgb(121, 125, 128);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM Manipulation</h1>
+    <div>
+      <h3>Accessing Element using ID and Class</h3>
+      <div id="first-div" class="sample-div">Sample Div</div>
+      <div id="second-div" class="sample-div">Div</div>
+      <div id="third-div" class="sample-div">Div 3</div>
+    </div>
+
+    <div>
+      <h3>Accessing Element using TagName</h3>
+      <h3>Unordered List</h3>
+      <ul>
+        <li class="unordered-list">List Item 1</li>
+        <li class="unordered-list">List Item 2</li>
+        <li class="unordered-list">List Item 3</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Accessing Element using Query Selector</h3>
+      <h3>Ordered List</h3>
+      <ol>
+        <li class="ordered-list">List Item 1</li>
+        <li class="ordered-list">List Item 2</li>
+        <li class="ordered-list">List Item 3</li>
+      </ol>
+    </div>
+
+    <div>
+      <h3>Accessing element using Parent and Siblings</h3>
+      <div id="parent">
+        <div id="child1">Child 1</div>
+        <div id="child2">Child 2</div>
+        <div id="child3">Child 3</div>
+        <div id="child4">Child 4</div>
+        <div id="child5">Child 5</div>
+      </div>
+    </div>
+
+    <div>
+      <h3>Appending New Elements</h3>
+      <div id="parent-element">Parent Element</div>
+    </div>
+
+    <div>
+      <h3>Removing Elements</h3>
+      <div id="element-to-be-removed">Remove this element</div>
+    </div>
+
+    <div>
+      <h3>Updating Element Attributes</h3>
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/624/624106.png"
+        alt="Image of Day or Night"
+        id="day-night-icon"
+        style="width: 100px"
+      />
+    </div>
+
+    <div>
+      <h3>Adding Event Listeners and Manipulating Elements Styles</h3>
+      <div><button id="dark-mode-btn">Dark Mode</button></div>
+      <div id="page-container">
+        <div id="page-mode-text">Light Mode</div>
+        <div>Welcome to my profile</div>
+      </div>
+    </div>
+
+    <script src="1-dom.js"></script>
+  </body>
+</html>
+
+<!-- <div>Child Element</div> -->
