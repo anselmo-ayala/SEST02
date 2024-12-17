@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Callback Hell</title>
+</head>
+
+<body>
+    <h1>JS Callback Hell</h1>
+    <script>
+        const task1 = (callback) => {
+            setTimeout(() => {
+                console.log("Task 1 complete.");
+                callback();
+            }, 2000);
+        };
+
+        const task2 = (callback) => {
+            setTimeout(() => {
+                console.log("Task 2 complete.");
+                callback();
+            }, 3000);
+        };
+
+        const task3 = (callback) => {
+            setTimeout(() => {
+                console.log("Task 3 complete.");
+                callback();
+            }, 500);
+        };
+
+        task1(() => {
+            task2(() => {
+                task3(() => {
+                    console.log("All Tasks completed.");
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Callback</title>
+</head>
+
+<body>
+    <h1>JS Callback</h1>
+    <script>
+        // Callback: a function passed as an argument to another function
+        const getData = (callback) => {
+            // setTimeout(function, delay)
+            setTimeout(() => {
+                const data = "This is the data";
+                callback(data);
+            }, 3000);
+        };
+        const processData = (data) => {
+                setTimeout(() => {
+                    console.log("Process Data:", data);
+                }, 4000);
+            };
+        getData(processData);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Async/Await</title>
+</head>
+
+<body>
+    <h1>JS Async/Await</h1>
+    <script>
+
+        // Promise: object that manage asynchronous operations.
+        // Syntax: new Promise((resolve, reject) => {})
+        // pending:
+        // resolve: task completed.
+        // reject: task failed.
+        const task1 = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const taskCompleted = true;
+                    if (taskCompleted) {
+                        resolve("Task 1 is complete.");
+                    } else {
+                        reject("Task 1 Failed.");
+                    }
+                }, 2000);
+            });
+        };
+
+        const task2 = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const taskCompleted = true;
+                    if (taskCompleted) {
+                        resolve("Task 2 is complete.");
+                    } else {
+                        reject("Task 2 failed.");
+                    }
+                }, 3000);
+            });
+        };
+
+        const task3 = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const taskCompleted = true;
+                    if (taskCompleted) {
+                        resolve("Task 3 is complete.");
+                    } else {
+                        reject("Task 3 failed.");
+                    }
+                }, 3000);
+            });
+        };
+
+        // async = makes a function return a promise
+        // await = makes a async function wait for a promise
+        const executeTask = async () => {
+            try {
+                const task1Result = await task1();
+                console.log(task1Result);
+                const task2Result = await task2();
+                console.log(task2Result);
+                const task3Result = await task3();
+                console.log(task3Result);
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        };
+        executeTask();
+
+
+    </script>
+</body>
+
+</html>
