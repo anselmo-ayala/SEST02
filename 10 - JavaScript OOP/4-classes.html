@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Classes</title>
+</head>
+
+<body>
+    <h1>JS Classes</h1>
+    <script>
+
+        // Classes
+        class Car {
+            constructor(color, make, model, year) {
+                this.color = color;
+                this.make = make;
+                this.model = model;
+                this.year = year;
+            }
+            start() {
+                console.log(`${this.make} ${this.model} started.`);
+            }
+            stop() {
+                console.log(`${this.make} ${this.model} stopped.`);
+            }
+        }
+
+        const car1 = new Car("Blue", "Ford", "Mustang", "2024");
+        const car2 = new Car("Black", "Dodge", "Charger", "2022");
+
+        console.log("Car 1:", car1);
+        console.log("Car 2:", car2);
+
+        car1.start();
+        car1.stop();
+        car2.start();
+        car2.stop();
+
+
+    </script>
+</body>
+
+</html>

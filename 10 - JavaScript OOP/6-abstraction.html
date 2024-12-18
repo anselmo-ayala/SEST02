@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP Abstraction</title>
+</head>
+
+<body>
+    <h1>OOP Abstraction</h1>
+    <script>
+
+        // Abstraction:
+        // Hiding complexities and only showing essential interfaces
+        function Employee(name, age, baseSalary) {
+            this.name = name;
+            this.age = age;
+            this.baseSalary = baseSalary;
+            let monthlyBonus = 1000;
+            let calculateFinalSalary = function () {
+                let finalSalary = baseSalary + monthlyBonus;
+                console.log(`Final Salary: ${finalSalary}`);
+            };
+            this.getEmployeeDetails = function () {
+                console.log("== Employee Details ==");
+                console.log(`Name: ${this.name}`);
+                console.log(`Age: ${this.age}`);
+                calculateFinalSalary();
+            };
+        }
+        let employee1 = new Employee("John", 20, 2000);
+        employee1.getEmployeeDetails();
+
+
+
+    </script>
+</body>
+
+</html>

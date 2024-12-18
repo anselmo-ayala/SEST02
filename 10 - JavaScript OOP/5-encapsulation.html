@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP Encapsulation</title>
+</head>
+
+<body>
+    <h1>OOP Encapsulation</h1>
+    <script>
+
+        /*
+          Encapsulation:
+          
+          is the process of bundling data (properties) and methods (functions) that operate on that data together in a single unit called objects.
+        */
+
+        class BankAccount {
+            #balance;
+            #accountNumber;
+            constructor(accountNumber, balance) {
+                this.#accountNumber = accountNumber;
+                this.#balance = balance;
+            }
+            getBalance() {
+                return this.#balance;
+            }
+
+            getAccountInfo() {
+                console.log("== ACCOUNT INFO ==");
+                console.log(`Account Number: ${this.#accountNumber}`);
+                console.log(`Balance: ${this.#balance}`);
+            }
+
+            deposit(amount) {
+                if (amount > 0) {
+                    this.#balance += amount;
+                    console.log(`Deposited $${amount}.`);
+                    console.log(`New balance: $${this.#balance}`);
+                } else {
+                    console.log("Invalid deposit amount. Amount must be positive.");
+                }
+            }
+
+            withdraw(amount) {
+                if (amount > 0 && amount <= this.#balance) {
+                    this.#balance -= amount;
+                    console.log(`Withdraw $${amount}.`);
+                    console.log(`New balance: $${this.#balance}`);
+                } else {
+                    console.log("Insufficient funds.");
+                }
+            }
+        }
+        const account = new BankAccount("321-654-876", 3000);
+        console.log("Balance:", account.getBalance());
+        account.getAccountInfo();
+        account.deposit(500);
+        account.withdraw(3000);
+
+
+    </script>
+</body>
+
+</html>

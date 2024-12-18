@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>OOP Inheritance</title>
+</head>
+
+<body>
+   <h1>OOP Inheritance</h1>
+   <script>
+
+      /*
+        Inheritance: mechanism that allows objects to acquire the properties and methods of other objects.
+        */
+
+      // Parent Class (base class):
+      class Animal {
+         constructor(name) {
+            this.name = name;
+         }
+         eat() {
+            console.log(`${this.name} is eating.`);
+         }
+      }
+      // Child Class (derived class)
+      class Dog extends Animal {
+         constructor(name, breed) {
+            super(name);
+            this.breed = breed;
+         }
+         bark() {
+            console.log(`Woof! Woof!`);
+         }
+      }
+      let animal = new Animal("Generic Animal");
+      let dog = new Dog("Buddy", "Golden Retriever");
+      let pinoyDog = new Dog("Browny", "Aspin");
+      console.log("Animal Name:", animal.name);
+      animal.eat();
+      console.log("Dog Name:", dog.name);
+      console.log("Dog Breed:", dog.breed);
+      console.log("Pinoy Dog Name:", pinoyDog.breed);
+      dog.eat();
+      dog.bark();
+
+
+   </script>
+</body>
+
+</html>

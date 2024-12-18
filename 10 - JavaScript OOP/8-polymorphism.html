@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>OOP Polymorphish</title>
+</head>
+
+<body>
+   <h1>OOP Polymorphish</h1>
+   <script>
+
+      /*
+          Poly (Many) - morph (Form)ism:
+          
+          allows objects of different classes to respond to the same method call in different ways.
+      */
+
+      class Animal {
+         constructor(name) {
+            this.name = name;
+         }
+         makeSound() {
+            console.log(`${this.name} makes a sound`);
+         }
+      }
+
+      class Dog extends Animal {
+         /* 
+         Method Overriding:
+         allows you to redefine the method inherited from the parent class.
+         */
+         makeSound() {
+            console.log(`${this.name} Woof!!`);
+         }
+      }
+      class Cat extends Animal {
+         makeSound() {
+            console.log(`${this.name} Meow!`);
+         }
+      }
+      const animal = new Animal("Animal");
+      const dog = new Dog("Buddy");
+      const cat = new Cat("Luna");
+      animal.makeSound();
+      dog.makeSound();
+      cat.makeSound();
+
+   </script>
+
+</body>
+
+</html>

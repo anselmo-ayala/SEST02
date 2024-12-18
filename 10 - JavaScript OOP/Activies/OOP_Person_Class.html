@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Person Class Example</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Define the Person class
+        class Person {
+            constructor(name, age, occupation, hobbies, address) {
+                this.name = name;
+                this.age = age;
+                this.occupation = occupation;
+                this.hobbies = hobbies;
+                this.address = address;
+            }
+
+            // Method to introduce the person
+            introduce() {
+                console.log(`Hi, I'm ${this.name}. I'm ${this.age} years old and I work as a ${this.occupation}.`);
+                console.log(`My hobbies include: ${this.hobbies.join(', ')}.`);
+                console.log(`I live at ${this.address.street}, ${this.address.city}, ${this.address.state}, ${this.address.zipCode}.`);
+            }
+
+            // Method to increment the person's age by 1
+            getOlder() {
+                this.age += 1;
+            }
+
+            // Method to change the occupation
+            changeOccupation(newOccupation) {
+                this.occupation = newOccupation;
+            }
+
+            // Method to add a new hobby
+            addHobby(newHobby) {
+                this.hobbies.push(newHobby);
+            }
+
+            // Method to update the address
+            move(newAddress) {
+                this.address = newAddress;
+            }
+        }
+
+        // Creating 3 different Person objects
+        const person1 = new Person('Alice', 28, 'Doctor', ['Hobby1', 'Hobby2', 'Hobby3'], { street: 'Street Person1', city: 'City Person1', state: 'State Person1', zipCode: '10101' });
+
+        const person2 = new Person('Bob', 34, 'Designer', ['Hobby1', 'Hobby2', 'Hobby3'], { street: 'Street Person2', city: 'City Person2', state: 'State Person2', zipCode: '20202' });
+
+        const person3 = new Person('Charlie', 25, 'Doctor', ['Hobby1', 'Hobby2', 'Hobby3'], { street: 'Street Person3', city: 'City Person3', state: 'State Person3', zipCode: '30303' });
+
+        person1.introduce();
+        person1.getOlder();
+        person1.changeOccupation('Senior Engineer');
+        person1.addHobby('photography');
+        person1.move({ street: 'New Street Person1', city: 'New City Person1', state: 'New State Person1', zipCode: '11011' });
+        person1.introduce();
+
+        person2.introduce();
+        person2.getOlder();
+        person2.changeOccupation('Senior Designer');
+        person2.addHobby('photography');
+        person2.move({ street: 'New Street Person2', city: 'New City Person2', state: 'New State Person2', zipCode: '22022' });
+        person2.introduce();
+
+        person3.introduce();
+        person3.getOlder();
+        person3.changeOccupation('Senior Doctor');
+        person3.addHobby('photography');
+        person3.move({ street: 'New Street Person3', city: 'New City Person3', state: 'New State Person3', zipCode: '33033' });
+        person3.introduce();
+
+    
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Procedural VS OOP</title>
+</head>
+
+<body>
+    <h1>Procedural VS OOP</h1>
+    <script>
+
+        // Procedural Programming
+        let color = "Silver";
+        let make = "Toyota";
+        let model = "Camry";
+        let year = "2022";
+        let speed = 60;
+        function startCar(make, model) {
+            console.log(`${make} ${model} started.`);
+        }
+        startCar(make, model);
+
+        const car = {
+            color: "Silver",
+            make: "Toyota",
+            model: "Camry",
+            year: "2022",
+            speed: 60,
+            start() {
+                console.log(`${this.make} ${this.model} started.`);
+            },
+            stop() {
+                console.log(`${this.make} ${this.model} stopped.`);
+            },
+            accelerate() {
+                console.log(
+                    `${this.make} ${this.model} accelerated to ${this.speed} mph.`
+                );
+            },
+        };
+        console.log("Model:", car.model);
+        car.start();
+        car.accelerate();
+        car.stop();
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Object Constructors</title>
+</head>
+
+<body>
+    <h1>JS Object Constructors</h1>
+    <script>
+
+
+        //   const car1 = {
+        //     color: "Silver",
+        //     make: "Toyota",
+        //     model: "Camry",
+        //     year: "2022",
+        //     speed: 60,
+        //     start() {
+        //       console.log(`${this.make} ${this.model} started.`);
+        //     },
+        //     stop() {
+        //       console.log(`${this.make} ${this.model} stopped.`);
+        //     },
+        //     accelerate() {
+        //       console.log(
+        //         `${this.make} ${this.model} accelerated to ${this.speed} mph.`
+        //       );
+        //     },
+        //   };
+
+
+        // Contructor: special method for defining the properties and method of an obkect.
+
+        function Car(color, make, model, year, speed) {
+            (this.color = color),
+                (this.make = make),
+                (this.model = model),
+                (this.year = year),
+                (this.speed = speed),
+                (this.start = function () {
+                    console.log(`${this.make} ${this.model} started.`);
+                }),
+                (this.stop = function () {
+                    console.log(`${this.make} ${this.model} stopped.`);
+                }),
+                (this.accelerate = function () {
+                    console.log(
+                        `${this.make} ${this.model} accelerated to ${this.speed} mph.`
+                    );
+                });
+        }
+
+        const car1 = new Car("Silver", "Toyota", "Camry", "2022", 60);
+        const car2 = new Car("Blue", "Ford", "Mustang", "2024", 90);
+        console.log(`${car1.make} ${car1.model}`);
+        car1.start();
+        car1.accelerate();
+        car1.stop();
+        console.log(`${car2.make} ${car2.model}`);
+        car2.start();
+        car2.accelerate();
+        car2.stop();
+
+    </script>
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Prototypes</title>
+</head>
+
+<body>
+    <h1>JS Prototypes</h1>
+    <script>
+
+        const numbers = [1, 2, 3, 4, 5];
+        console.log(numbers);
+        console.log("Data Type:", typeof numbers);
+        console.log("Length:", numbers.length);
+
+
+        function Car(color, make, model, year, speed) {
+            (this.color = color),
+                (this.make = make),
+                (this.model = model),
+                (this.year = year),
+                (this.start = function () {
+                    console.log(`${this.make} ${this.model} started.`);
+                });
+        }
+
+        const car1 = new Car("Red", "Ford", "Mustang", "2024");
+        const car2 = new Car("Black", "Dodge", "Charger", "2021");
+
+        // Create a new property for all of our Car objects
+        Car.prototype.speed = 90;
+        console.log("Car 1:", car1.speed);
+        console.log("Car 2:", car2.speed);
+
+        // Create a new method for all of our Car objects
+        Car.prototype.stop = function () {
+            console.log(`${this.make} ${this.model} stopped.`);
+        };
+
+        // Create a new method for all of our Car objects
+        Car.prototype.stop = function () {
+            console.log(`${this.make} ${this.model} stopped.`);
+        };
+
+        car1.stop();
+        car2.stop();
+
+        
+        // This will not work for constructor function
+        //   Car.speed = 90;
+        //   console.log("Car 1:", car1.speed);
+        //   console.log("Car 2:", car2.speed);
+
+        //   Add a new property to a object.
+        //   const car = {
+        //     color: "Silver",
+        //     make: "Toyota",
+        //     model: "Camry",
+        //     year: "2022",
+        //     start() {
+        //       console.log(`${this.make} ${this.model} started.`);
+        //     },
+        //   };
+        //   console.log("Car:", car);
+        //   car.speed = 60;
+        //   console.log("Car:", car);
+
+        // Add a new method to the object
+        //   car.stop = function () {
+        //     console.log(`${this.make} ${this.model} stopped.`);
+        //   };
+        //   car.stop();
+        //   console.log("Car:", car);
+
+
+
+    </script>
+
+</body>
+
+</html>
