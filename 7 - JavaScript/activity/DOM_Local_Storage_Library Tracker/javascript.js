@@ -29,7 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll("li");
       console.log(li);
       const borrowButton = document.createElement("button");
-      borrowButton.textContent = book.borrowed ? "Not Available Return the Book" : "Borrow the Book";
+      borrowButton.textContent = book.borrowed
+        ? "Not Available | Return the Book"
+        : "Borrow the Book";
       borrowButton.addEventListener("click", () => {
         book.borrowed = !book.borrowed;
         saveBooks();
