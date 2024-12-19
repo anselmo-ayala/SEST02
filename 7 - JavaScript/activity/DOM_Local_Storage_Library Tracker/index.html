@@ -13,6 +13,54 @@
 
     <h1>Activity: Library Tracker</h1>
 
+    <p>
+        <strong>Objective:</strong> Create an array of book objects. Each book
+        object should have properties like <em>title</em>, <em>author</em>, and
+        <em>isAvailable</em>. Write functions to <em>add new books</em>,
+        <em>display available books</em>, and <em>mark a book as borrowed</em>.
+    </p>
+    <ol>
+        <li>Set up the initial library:</li>
+        <ul>
+            <li>Create an array called library.</li>
+            <li>
+                Add three book objects to the array. Each book object should have:
+            </li>
+            <ul>
+                <li>title (string)</li>
+                <li>author (string)</li>
+                <li>
+                    isAvailable (boolean) to show if the book is currently available
+                </li>
+            </ul>
+        </ul>
+        <li>Create functions:</li>
+        <ul>
+            <li>
+                <p>
+                    <strong>Display Available Books:</strong> Write a function called
+                    displayAvailableBooks that loops through the library array and
+                    prints only the books that are available.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Borrow Book:</strong> Write a function called borrowBook
+                    that takes a title as a parameter, searches for the book, and if it
+                    is available, changes isAvailable to false and prints a message
+                    confirming it was borrowed. If it’s not available, print a message
+                    saying it’s already borrowed.
+                </p>
+            </li>
+        </ul>
+        <li>Test the Functions</li>
+        <ul>
+            <li>Call displayAvailableBooks to show all available books.</li>
+            <li>Call borrowBook("1984") to attempt borrowing a book.</li>
+            <li>Call displayAvailableBooks again to see the updated list.</li>
+        </ul>
+    </ol>
+
     <button id="displayBooks">Display Available Books</button>
     <ul id="bookList"></ul>
     <h2>Add a New Book</h2>
