@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Stacks and Queues</title>
+</head>
+
+<body>
+    <h1>JS Stacks and Queues</h1>
+    <script>
+        // Stack: add and remove elements at the end of the array.
+        let plateStack = [];
+        // .push(): adds an element at the end the array.
+        plateStack.push("Plate 1");
+        plateStack.push("Plate 2");
+        plateStack.push("Plate 3");
+        console.log("Plate Stack:", plateStack);
+        // .pop(): delete an element at the en dof the array.
+        plateStack.pop();
+        console.log("Plate Stack:", plateStack);
+
+
+        // Queues: add at the end of the array, remove at the start
+        let queue = [];
+        // .push(): adds an element at the end the array.
+        queue.push("Person 1");
+        queue.push("Person 2");
+        queue.push("Person 3");
+        console.log("Queue:", queue);
+        // .shift(): delete an element at the start of the array.
+        queue.shift();
+        console.log("Queue:", queue);
+
+
+
+
+    </script>
+</body>
+
+</html>

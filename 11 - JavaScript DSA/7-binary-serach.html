@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Binary Search</title>
+
+</head>
+
+<body>
+    <h1>JS Binary Search</h1>
+    <script>
+        // Binary search function
+        function binarySearch(arr, target) {
+            let left = 0;
+            let right = arr.length - 1;
+
+            while (left <= right) {
+                const mid = Math.floor((left + right) / 2);
+
+                if (arr[mid] === target) {
+                    return mid; // Return the index of the target element
+                } else if (arr[mid] < target) {
+                    left = mid + 1;
+                } else {
+                    right = mid - 1;
+                }
+            }
+
+            return -1; // Return -1 if the target element is not found
+        }
+
+        // Perform binary search and display result
+        const sortedArray = [11, 12, 22, 25, 34, 64, 90];
+        const target = 22; // Example target element to search for
+        const index = binarySearch(sortedArray, target);
+        console.log("Element 22 found at index: " + index);
+    </script>
+</body>
+
+</html>

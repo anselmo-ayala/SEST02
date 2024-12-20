@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Sets</title>
+</head>
+
+<body>
+    <h1>JS Sets</h1>
+    <script>
+
+        // Arrays can have duplicate elements
+        let array = [1, 1, 1, 2, 2, 3, 3, 4, 4];
+        console.log(array);
+        // Values of different keys can be the same.
+        // Keys are unique.
+        let object = {
+            name: "John",
+            anotherName: "John",
+            // name: "Jane", This will overwrite the name key
+        };
+        console.log(object);
+
+        // Sets: Elements in a set is unique
+        const mySet = new Set();
+        // Adding Elements
+        // .add(): add an element in the set (case-sensitive)
+        mySet.add("apple");
+        mySet.add("banana");
+        mySet.add("apple");
+        mySet.add("Apple");
+        mySet.add("banana");
+        mySet.add("Banana");
+        console.log("Set of Fruits:", mySet);
+
+        // Check if an element exist
+        // Return: true or false
+        console.log("Is banana included?", mySet.has("banana"));
+
+        // Remove an element/value
+        mySet.delete("Apple");
+        mySet.delete("Banana");
+        console.log("Set of Fruits:", mySet);
+
+        // Get the size of the set
+        console.log("Size of the set:", mySet.size);
+
+        // Clear the set
+        // mySet.clear();
+        // console.log("Set of Fruits:", mySet);
+
+        // Iterating over a set
+        console.log("=== FOR OF LOOP === ");
+        for (let fruit of mySet) {
+            console.log("Fruit:", fruit);
+        }
+        console.log("=== FOR EACH METHOD === ");
+        mySet.forEach((fruit) => {
+            console.log("Fruit:", fruit);
+        });
+
+        // Set Operations
+        // Union: combine elements from two sets, removing duplicates.
+        // Intersection: finding common elements between two sets
+        // Difference: Finding elements in one set that are not in the another.
+        // Symmetric Difference: Finding elements that are in one set or the other but not both.
+
+        const setA = new Set(["a", "b", "c"]);
+        const setB = new Set(["b", "c", "d"]);
+        // Union
+        const unionSet = new Set([...setA, ...setB]);
+        console.log("Union Set:", unionSet);
+
+        // Intersection
+        const intersectionSet = new Set(
+            [...setA].filter((letter) => setB.has(letter))
+        );
+        console.log("Intersection Set:", intersectionSet);
+
+        // Difference
+        const differenceSet = new Set(
+            [...setA].filter((letter) => !setB.has(letter))
+        );
+        console.log("Difference Set:", differenceSet);
+
+        // Symmetric Difference
+
+        const symmetricDifferenceZ = new Set(
+            [...unionSet].filter((letter) => !intersectionSet.has(letter))
+        );
+        console.log("Symmetric Difference:", symmetricDifferenceZ);
+
+        // Symmetric Difference
+        //   const symmetricDifference = new Set(
+        //     [...setA, ...setB].filter(
+        //       (x) =>
+        //         ![...setA, ...setB]
+        //           .filter((y) => y === x)
+        //           .slice(1)
+        //           .includes(x)
+        //     )
+        //   );
+        const symmetricDifference = new Set(
+            [...unionSet].filter((letter) => !intersectionSet.has(letter))
+        );
+        console.log("Symmetric Difference:", symmetricDifference);
+
+
+
+
+        // Find elements in setA but not in setB 
+        const differenceA = new Set([...setA].filter(letter => !setB.has(letter)));
+        // Find elements in setB but not in setA
+        const differenceB = new Set([...setB].filter(letter => !setA.has(letter)));
+        // Combine the two sets 
+        const symmetricDifferenceA = new Set([...differenceA, ...differenceB]);
+
+        console.log("Symmetric Difference using Union Set:", symmetricDifferenceA);
+
+        const symmetricDifferenceB = new Set([...setA].filter(letter => !setB.has(letter)).concat([...setB].filter(letter => !setA.has(letter))));
+
+        console.log("Symmetric Difference using .cancat:", symmetricDifferenceB);
+
+        const symmetricDifferenceC = new Set([...setA].filter(letter => !setB.has(letter)).reduce((acc, item) => (acc.add(item), acc), new Set([...setB].filter(letter => !setA.has(letter))))
+        );
+
+        console.log("Symmetric Difference using .reduce:", symmetricDifferenceC); // Output: Set { 'a', 'd' }
+
+
+    </script>
+</body>
+
+</html>

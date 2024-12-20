@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Bubble Sort</title>
+</head>
+
+<body>
+    <h1>JS Bubble Sort</h1>
+    <script>
+
+        /*
+        Bubble Sort repeatedly compare adjacent elements and swap them if they
+        are in the wrong order, gradually "bubbling" larger elements to the end of the array.
+        */
+
+        const numbers = [64, 34, 25, 12, 22, 11, 90];
+
+        function bubbleSort(arrayToSort, arrayLength) {
+            // Outer Loop: iterate over the array from the beginning to the second-to-the-last element.
+            for (let outerIndex = 0; outerIndex < arrayLength - 1; outerIndex++) {
+                // Inner Loop:
+                let isSwapped = false;
+                for (
+                    let innerIndex = 0;
+                    innerIndex < arrayLength - outerIndex - 1;
+                    innerIndex++
+                ) {
+                    if (arrayToSort[innerIndex] > arrayToSort[innerIndex + 1]) {
+                        let temp = arrayToSort[innerIndex];
+                        arrayToSort[innerIndex] = arrayToSort[innerIndex + 1];
+                        arrayToSort[innerIndex + 1] = temp;
+                        isSwapped = true;
+                    }
+                }
+                if (!isSwapped) {
+                    break;
+                }
+            }
+        }
+
+        const numberOfElements = numbers.length;
+        bubbleSort(numbers, numberOfElements);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

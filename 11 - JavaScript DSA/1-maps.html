@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Maps</title>
+</head>
+
+<body>
+    <h1>JS Maps</h1>
+    <script>
+
+        // Arrays
+        let array = ["John", 30, true, false, [1, 2, 3, 4, 5]];
+        console.log(array);
+        // Object
+        let person = {
+            name: "John",
+            age: 20,
+            isMarried: true,
+            hobbies: ["Photography", "Video Editing"],
+            address: {
+                city: "Cavite",
+                street: "123 Example Street",
+            },
+        };
+        console.log(person);
+
+        // Maps: collection of key => value pairs.
+        // Both keys and values can be of any data types.
+        const myMap = new Map();
+        // Adding key => value pairs
+        myMap.set("name", "Jane");
+        myMap.set(10, "ten");
+        myMap.set(true, "Boolean Value");
+        console.log(myMap);
+
+        // Retrieve values
+        console.log("name =>", myMap.get("name"));
+        console.log("10 =>", myMap.get(10));
+        console.log("true =>", myMap.get(true));
+
+        // Check for key existence
+        // .has(): check if a key exist
+        // Return: true or false
+        const hasName = myMap.has("name");
+        const hasAge = myMap.has("age");
+        console.log("name?", hasName);
+        console.log("age?", hasAge);
+
+        // Delete key-value pair
+        myMap.delete("name");
+        console.log(myMap);
+
+        // Getting the map size
+        const size = myMap.size;
+        console.log("Size:", size);
+
+        // Clear the map
+        // myMap.clear();
+        // console.log(myMap);
+
+        // Iterate over a map
+        console.log(" === FOR OF == ");
+        for (const [key, value] of myMap) {
+            console.log(`Key: ${key}, Value: ${value}`);
+        }
+        console.log(" === FOR EACH == ");
+        myMap.forEach((value, key) => {
+            console.log(`Key: ${key}, Value: ${value}`);
+        });
+
+
+
+
+    </script>
+
+</body>
+
+</html>

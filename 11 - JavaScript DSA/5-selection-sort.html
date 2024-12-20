@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Selection Sort</title>
+</head>
+
+<body>
+    <h1>JS Selection Sort</h1>
+    <script>
+
+        // Swap the position of two elements within an array
+        function swapElements(arrayToSwap, firstIndex, secondIndex) {
+            const temp = arrayToSwap[firstIndex];
+            arrayToSwap[firstIndex] = arrayToSwap[secondIndex];
+            arrayToSwap[secondIndex] = temp;
+        }
+
+        // [20, 12, 10, 15, 2]
+        // O1: [2, 12, 10, 15, 20]
+        // Q2: [2, 10, 12, 15, 20]
+        // [0,   1,  2,  3, 4]
+        // temp = 10
+
+        function selectionSort(arrayToSort, arrayLength) {
+            for (let outerIndex = 0; outerIndex < arrayLength - 1; outerIndex++) {
+                let minIndex = outerIndex;
+                for (
+                    let innerIndex = outerIndex + 1;
+                    innerIndex < arrayLength;
+                    innerIndex++
+                ) {
+                    if (arrayToSort[innerIndex] < arrayToSort[minIndex]) {
+                        minIndex = innerIndex;
+                    }
+                }
+
+                // arrayLength = 5
+                // outerIndex = 1
+                // innerIndex = 5
+                // minIndex = 2
+                // minimumValue = 2
+                // Inner For Loop:
+                // [20, 12, 10, 15, 2]
+                // [2, 12, 10, 15, 20]
+                // [0,   1,  2,  3, 4]
+
+                swapElements(arrayToSort, minIndex, outerIndex);
+            }
+        }
+
+        const numbers = [20, 12, 10, 15, 2];
+        const numberOfElements = numbers.length;
+
+        selectionSort(numbers, numberOfElements);
+        console.log("Sorted Array:", numbers);
+
+
+    </script>
+</body>
+
+</html>

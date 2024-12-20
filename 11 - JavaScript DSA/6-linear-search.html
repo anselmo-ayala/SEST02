@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Search</title>
+</head>
+
+<body>
+    <h1>Linear Search</h1>
+    <script>
+        // Linear search function
+        function linearSearch(arr, target) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === target) {
+                    return i; // Return the index of the target element
+                }
+            }
+            return -1; // Return -1 if the target element is not found
+        }
+
+        // Perform linear search and display result
+        const array = [64, 34, 25, 12, 22, 11, 90];
+        const target = 90; // Target element to search for
+        const index = linearSearch(array, target);
+        console.log("Element 90 found at index: " + index);
+    </script>
+</body>
+
+</html>
