@@ -27,3 +27,9 @@ let letContainer = "Block scope";
 // };
 // console.log(window.varContainer);
 // window.varFunction();
+
+// Node.js: global object.
+// variables and functions declared using the var keyword cannot be accessed using the global object.
+console.log("Var:", global.varContainer);
+console.log("Let:", global.letContainer);
+// global.varFunction();
