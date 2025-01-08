@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activity 2</title>
+</head>
+
+<body>
+  <h1>ACTIVITY 2: Print Numbers in a Range</h1>
+  <ul>
+    <li>
+      Create a JavaScript program that prints all the numbers between a given
+      range.
+    </li>
+    <li>
+      Prompt the user to enter the starting and ending numbers for the range.
+    </li>
+    <li>
+      Use a loop to iterate through the numbers in the range. Print each
+      number in the console.
+    </li>
+  </ul>
+
+</body>
+
+<h1>Print Numbers in a Range</h1>
+<label for="start">Starting Number:</label>
+<input type="number" id="start" name="start"><br><br>
+<label for="end">Ending Number:</label>
+<input type="number" id="end" name="end"><br><br>
+<button onclick="printRange()">Print Numbers</button>
+
+<script>
+  function printRange() {
+    let start = parseInt(document.getElementById('start').value);
+    let end = parseInt(document.getElementById('end').value);
+
+    // for loops condition
+    for (let i = start; i <= end; i++) {
+      console.log(i);
+    }
+  }
+</script>
+
+
+
+</html>
