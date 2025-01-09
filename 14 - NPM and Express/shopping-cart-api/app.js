@@ -123,6 +123,26 @@ app.get("/cart/:productId", (request, response) => {
 });
 
 // Create products [Array] in /cart endpoint
+// {
+// "products":[
+//     {
+//         "id": 1,
+//         "name": "Laptop",
+//         "price": 1000
+//     },
+//     {
+//         "id": 2,
+//         "name": "Mobile Phone",
+//         "price": 500
+//     },
+//     {
+//         "id": 3,
+//         "name": "Mechanical Keyboard",
+//         "price": 300
+//     }
+// ]
+// }
+
 app.post("/cart", (request, response) => {
   const { products } = request.body;
   if (!products || !Array.isArray(products)) {
@@ -137,7 +157,7 @@ app.post("/cart", (request, response) => {
   response.status(201).json({ message: "Products added to cart" });
 });
 
-// Create 1 product from /cart endpoint from the productID
+// Create product to /cart endpoint from the productID
 app.post("/cart/:productId", (request, response) => {
   const productId = parseInt(request.params.productId);
   const product = products.find(
