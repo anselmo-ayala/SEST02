@@ -4,6 +4,9 @@ const port = 3000;
 const products = require("./products");
 const cartItems = require("./cart");
 
+// Middleware
+app.use(express.json());
+
 // app.get()
 // app.post()
 // app.put()
@@ -35,6 +38,72 @@ app.get("/products", (request, response) => {
     }
   });
 });
+
+function generateUniqueId() {
+  if (products.length === 0) {
+    // No product object inside of the products array.
+    return 1;
+  }
+
+  const lastProductObject = products[products.length - 1];
+  return lastProductObject.id + 1;
+}
+
+// .post(Route/URL, Callback(Route Handler))
+app.post("/products", (request, response) => {
+  // This will return the same value as desctructuring objects.
+  // const name = request.body.name
+  // const price = request.body.price
+  const { name, price } = request.body;
+  if (!name || !price) {
+    return response.status(400).json({ message: "Name and price is required" });
+  }
+  const newProduct = {
+    id: generateUniqueId(),
+    name,
+    price,
+  };
+  products.push(newProduct);
+  response.status(201).json({ message: "Product added to the product list." });
+});
+
+// .put(Route/URL, Callback(Route Handler))
+app.put("/products/:productId", (request, response) => {
+  const productId = parseInt(request.params.productId);
+  const { name, price } = request.body;
+  if (!name || !price) {
+    return response.status(400).json({ message: "Name and price is required" });
+  }
+  const product = products.find(
+    (productObject) => productObject.id === productId
+  );
+  if (product) {
+    product.name = name;
+    product.price = price;
+    response.status(200).json({ message: "Product updated successfully." });
+  } else {
+    response.status(404).json({ message: "Product not found" });
+  }
+});
+
+app.delete("/products/:productId", (request, response) => {
+  const productId = parseInt(request.params.productId);
+
+  const productIndex = products.findIndex(
+    (productObject) => productObject.id === productId
+  );
+  if (productIndex !== -1) {
+    // .splice(start, deleteCount?, element/s)
+    products.splice(productIndex, 1);
+    response.status(200).json({ message: "Product deleted successfully" });
+  } else {
+    response.status(404).json({ message: "Product not found" });
+  }
+});
+
+// 1. Add a new product Object to the cartItems array. 
+// 2. Delete a product Object from the cartItems array.
+
 
 app.listen(port, () => {
   console.log(`Server listening on port: ${port}...`);
