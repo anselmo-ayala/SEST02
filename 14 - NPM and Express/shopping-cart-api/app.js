@@ -101,9 +101,78 @@ app.delete("/products/:productId", (request, response) => {
   }
 });
 
-// 1. Add a new product Object to the cartItems array. 
+// 1. Add a new product Object to the cartItems array.
 // 2. Delete a product Object from the cartItems array.
 
+// === Cart Section Start ===
+
+// Display /cart endpoint
+app.get("/cart", (request, response) => {
+  response.status(200).json(cartItems);
+});
+
+// Display Specific product in /cart endpoint
+app.get("/cart/:productId", (request, response) => {
+  const productId = parseInt(request.params.productId);
+  const product = cartItems.find((item) => item.id === productId);
+  if (product) {
+    response.status(200).json(product);
+  } else {
+    response.status(404).json({ message: "Product not found in cart" });
+  }
+});
+
+// Create products [Array] in /cart endpoint
+app.post("/cart", (request, response) => {
+  const { products } = request.body;
+  if (!products || !Array.isArray(products)) {
+    return response.status(400).json({ message: "Products array is required" });
+  }
+  products.forEach((product) => {
+    const productExists = cartItems.find((item) => item.id === product.id);
+    if (!productExists) {
+      cartItems.push(product);
+    }
+  });
+  response.status(201).json({ message: "Products added to cart" });
+});
+
+// Create 1 product from /cart endpoint from the productID
+app.post("/cart/:productId", (request, response) => {
+  const productId = parseInt(request.params.productId);
+  const product = products.find(
+    (productObject) => productObject.id === productId
+  );
+  if (!product) {
+    return response.status(404).json({ message: "Product not found" });
+  }
+  const productExists = cartItems.find((item) => item.id === productId);
+  if (productExists) {
+    return response.status(400).json({ message: "Product already in cart" });
+  }
+  cartItems.push(product);
+  response.status(201).json({ message: "Product added to cart" });
+});
+
+// Delete specific productID from /cart endpoint
+app.delete("/cart/:productId", (request, response) => {
+  const productId = parseInt(request.params.productId);
+  const productIndex = cartItems.findIndex((item) => item.id === productId);
+  if (productIndex !== -1) {
+    cartItems.splice(productIndex, 1);
+    response.status(200).json({ message: "Product removed from cart" });
+  } else {
+    response.status(404).json({ message: "Product not found in cart" });
+  }
+});
+
+// Delete all product from /cart endpoint
+app.delete("/cart", (request, response) => {
+  cartItems.length = 0;
+  response.status(200).json({ message: "Cart cleared" });
+});
+
+// === Cart Section End ===
 
 app.listen(port, () => {
   console.log(`Server listening on port: ${port}...`);
