@@ -157,7 +157,7 @@ app.post("/cart", (request, response) => {
   response.status(201).json({ message: "Products added to cart" });
 });
 
-// Create 1 product from /cart endpoint from the productID
+// Create product to /cart endpoint from the productID
 app.post("/cart/:productId", (request, response) => {
   const productId = parseInt(request.params.productId);
   const product = products.find(
