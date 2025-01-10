@@ -123,6 +123,7 @@ app.get("/cart/:productId", (request, response) => {
 });
 
 // Create products [Array] in /cart endpoint
+// Sample payload
 // {
 // "products":[
 //     {
