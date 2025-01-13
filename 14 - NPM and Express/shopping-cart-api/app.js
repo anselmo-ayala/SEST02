@@ -109,17 +109,16 @@ app.delete("/products/:productId", (request, response) => {
 // Display /cart endpoint
 app.get("/cart", (request, response) => {
   response.status(200).json(cartItems);
-});
 
-// Display Specific product in /cart endpoint
-app.get("/cart/:productId", (request, response) => {
-  const productId = parseInt(request.params.productId);
-  const product = cartItems.find((item) => item.id === productId);
-  if (product) {
-    response.status(200).json(product);
-  } else {
-    response.status(404).json({ message: "Product not found in cart" });
-  }
+  app.get("/cart/:productId", (request, response) => {
+    const productId = parseInt(request.params.productId);
+    const product = cartItems.find((item) => item.id === productId);
+    if (product) {
+      response.status(200).json(product);
+    } else {
+      response.status(404).json({ message: "Product not found in cart" });
+    }
+  });
 });
 
 // Create products [Array] in /cart endpoint
@@ -144,10 +143,10 @@ app.get("/cart/:productId", (request, response) => {
 // ]
 // }
 
-app.post("/cart", (request, response) => {
+/* app.post("/cart", (request, response) => {
   const { products } = request.body;
   if (!products || !Array.isArray(products)) {
-    return response.status(400).json({ message: "Products array is required" });
+    return response.status(400).json({ message: "Products Lists is required" });
   }
   products.forEach((product) => {
     const productExists = cartItems.find((item) => item.id === product.id);
@@ -157,6 +156,7 @@ app.post("/cart", (request, response) => {
   });
   response.status(201).json({ message: "Products added to cart" });
 });
+*/
 
 // Create product to /cart endpoint from the productID
 app.post("/cart/:productId", (request, response) => {
