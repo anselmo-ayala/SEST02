@@ -33,3 +33,17 @@ function App() {
 }
 
 export default App
+
+/*
+1. Make sure you have node installed.
+2. npm run vite@latest
+- name of project
+- react
+- cd project folder
+- npm install
+3. npm run dev (Start development environment)
+Remove:
+App.jsx - Create a new one.
+App.css 
+index.css
+*/
